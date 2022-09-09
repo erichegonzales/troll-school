@@ -1,9 +1,10 @@
 import './App.css';
+import HomePage from './HomePage'
 
 function App() {
   return (
     <div id='app'>
-      <h1>Font Test</h1>
+      <HomePage />
     </div>
   );
 }
