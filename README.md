@@ -1,24 +1,18 @@
-# README
+Setup instructions
+## bundle install
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+cd into client folder in your terminal
+## npm install
 
-Things you may want to cover:
+Foreman:
+## gem install foreman
+after foreman gem installed do the following:
+    - Create a Procfile.dev in you main folder
+    - copy and paste the following to Procfile.dev: 
+    //////////////////////////////////////////////
+        web: rails server -p 3000
+        client: npm start --prefix client
+    /////////////////////////////////////////////
+    - in your terminal: 
+        foreman start -f  Procfile.dev
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
