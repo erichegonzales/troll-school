@@ -1,3 +1,6 @@
+import './App.css';
+import Login from './Login'
+
 import './Navbar.css';
 import { Switch, Route } from 'react-router-dom'
 import  Courses from './Courses'
@@ -6,8 +9,13 @@ import  Profile from './Profile'
 import  Navbar from './Navbar';
 import MappScreen from './MappScreen';
 
+
 const App = () => {
   return (
+
+    <div id='app'>
+      <Login />
+
     <div>
       <Navbar />
       <Switch>
@@ -24,6 +32,7 @@ const App = () => {
           <MappScreen />
         </Route>
       </Switch>
+
     </div>
   );
 }
