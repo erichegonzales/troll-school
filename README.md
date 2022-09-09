@@ -8,7 +8,8 @@ Foreman:
 ## gem install foreman
 after foreman gem installed do the following:
     - Create a Procfile.dev in you main folder
-    - copy and paste the following to Procfile.dev: 
+    - copy and paste the following to Procfile.dev:  
+    ## already done
     //////////////////////////////////////////////
         web: rails server -p 3000
         client: npm start --prefix client
@@ -16,3 +17,4 @@ after foreman gem installed do the following:
     - in your terminal: 
         foreman start -f  Procfile.dev
 
+## npm install react-router-dom@5
