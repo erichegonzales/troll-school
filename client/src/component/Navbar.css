@@ -1,0 +1,78 @@
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+} 
+
+:root {
+    --color-primary: #000000;;
+    --color-secondary: #ff8282;
+    --color-white: #ffffff;
+    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* NAVBAR */
+
+
+.navbar-container {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    padding-right: 100px;
+    gap: 3%;
+    background-color: var(--color-white);  
+    height:50px;
+    
+}
+
+.nav-btn a{
+
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    color: var(--color-primary);
+
+}
+
+/* homepage */
+
+.home-page{
+    width: auto;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+
+.category-container {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: rgb(200, 255, 127);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+    color:var(--color-white);
+    
+}
+
+.category-container-row {
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    justify-content: center;
+}
+
+.category {
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-primary);
+}
+
+
+
+.mathscreen {
+    width: auto;
+    height: 100vh;
+}
