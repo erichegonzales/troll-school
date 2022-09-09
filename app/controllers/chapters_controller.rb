@@ -2,7 +2,7 @@ class ChaptersController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
-        render json: Chaper.all
+        render json: Chapter.all
     end
 
     def show
