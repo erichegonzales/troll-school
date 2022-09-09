@@ -1,8 +1,9 @@
 import Login from './Login'
 
-function HomePage() {
+const HomePage = () => {
   return (
-    <div>
+    <div className="home-page">
+      
     </div>
   );
 }
