@@ -46,17 +46,6 @@
 
 }
 
-.mapp-screen{
-    width: auto;
-    height: 100vh;
-    background-image: var(--background-image-1);
-
-}
-
-.mapp-screen-container{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 
 .category-container {
@@ -102,19 +91,36 @@
 }
 
 @keyframes slideInFromLeft{
- 0% {
-    transform: translateX(-1000%);
- }
- 100% {
-    transform: translateX(0);
- }
+    0% {
+        transform: translateX(-1000%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
+/* MAPS SCREEN */
+.mapp-screen{
+    width: auto;
+    height: 100vh;
+    background-image: var(--background-image-1);
+
+}
+
+.mapp-screen-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 10px;
+}
 .islands{
     width: 30%;
     height: 55vh;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    grid-template-rows: repeat(4, 100px);
 }
+
 
 .island1{
     background-color: var(--color-orange);
@@ -129,7 +135,12 @@
     margin: 10% 0 5% 0;
 }
 
-
+.level {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-secondary);
+    border-radius: 50px;
+}
 
 /*test*/
 /*
