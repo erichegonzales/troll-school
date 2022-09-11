@@ -2,10 +2,8 @@
 
 one:
   title: MyString
-  description: MyString
-  quiz: one
+  course: one
 
 two:
   title: MyString
-  description: MyString
-  quiz: two
+  course: two

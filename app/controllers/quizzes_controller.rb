@@ -1,5 +1,4 @@
 class QuizzesController < ApplicationController
-
   def index
     quizzes = Quiz.all
     render json: quizzes
@@ -13,5 +12,4 @@ class QuizzesController < ApplicationController
       render json: {error: "Quiz not found" }, status: 404
     end
   end
-
 end
