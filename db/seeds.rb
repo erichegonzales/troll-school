@@ -8,18 +8,14 @@
 
 puts 'Seeding data...'
 
-# User.destroy_all
-# Course.destroy_all
-# UserCourse.destroy_all
-
-#user = name, email, username, password avatar
-## create users
+#user = name, email, username, password, avatar
+user_1 = User.create(id: 1, name: "Andor", email: "andor@flatiron.com", username: "iluvicecream", avatar: "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Coffee-Bean-Ice-Cream-Cake_exps127341_THCA2449046B01_20_4b_RMS.jpg")
 
 #course = name, description, category
 course_1 = Course.create(id: 1, name: "Math", description: "Math is everywhere. We can practice our math skills while walking through the Swampy Woods.")
 
 #user_courses = user, course
-## create user courses
+user_course_1 = UserCourse.create(id: 1, user: user_1, course: course_1)
 
 #quizzes = title, description, course
 
@@ -38,4 +34,4 @@ question_4 = Question.create(id: 4, number: 4, content: "5 + 1 = ?", correct_ans
 # incorrect_3 = Incorrect.create(id: 3, incorrect_answer1: "7", incorrect_answer2: "6", question: question_3)
 # incorrect_4 = Incorrect.create(id: 4, incorrect_answer1: "7", incorrect_answer2: "8", question: question_4)
 
-puts 'Done with seeding!'
+puts 'Done seeding!'
