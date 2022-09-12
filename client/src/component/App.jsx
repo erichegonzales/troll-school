@@ -1,6 +1,6 @@
 import './App.css';
 import Login from './Login'
-
+import './Category.css';
 import './Navbar.css';
 import { Switch, Route } from 'react-router-dom'
 import  Courses from './Courses'
@@ -8,34 +8,9 @@ import  HomePage from './HomePage'
 import  Profile from './Profile'
 import  Navbar from './Navbar';
 import MappScreen from './MappScreen';
-import Quizzes from './Quizzes';
-import { useState, useEffect } from 'react';
+
 
 const App = () => {
-
- const[quiz, setQuiz] = useState([])
-    
-
-//  useEffect(() => {
-//         fetch('http://localhost:3000/questions')
-//         .then(req => req.json())
-//         .then(res => setQuiz(res))
-//     }, [])
-
-
-    
-
-    useEffect(() => {
-      const fetchUrl = async () => {
-      const request = await fetch('http://localhost:3000/questions')
-      const resp = await request.json()
-      setQuiz(resp)
-      console.log("hi")
-    }
-      fetchUrl()
-    },[])
-
-
 
 
 
@@ -44,7 +19,6 @@ const App = () => {
  
 
     <div>
-         {console.log(quiz)}
       <Navbar />
       <Switch>
         <Route exact path="/courses">
@@ -62,8 +36,8 @@ const App = () => {
         <Route exact path="/courses/math-mapp">
           <MappScreen />
         </Route>
-        <Route exact path="/courses/math-mapp/quizzes">
-          <Quizzes />
+        <Route exact path="/courses/spelling-mapp">
+
         </Route>
       </Switch>
 
