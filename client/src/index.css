@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+*{
+    font-family: "Gloria Hallelujah", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+} 
+
+:root {
+    --color-primary: #000000;;
+    --color-secondary: #66fdc1;
+    --color-white: #ffffff;
+    --color-orange: #eea32a;
+    --color-navbar: #c4fdf5;
+    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
+    --background-image-1:linear-gradient(to bottom, #c4fdf5, #8cf8e9, #4ef8e1, #32f5db, #00e4c6);
+    
+}
