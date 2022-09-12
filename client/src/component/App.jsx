@@ -32,9 +32,11 @@ const App = () => {
           <MappScreen />
         </Route>
       </Switch>
+      </div>
 
-    </div>
-  );
-}
+    // </div>
+    
+    );
+  }
 
 export default App;
