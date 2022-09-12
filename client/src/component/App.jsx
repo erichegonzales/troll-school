@@ -13,22 +13,22 @@ import MappScreen from './MappScreen';
 const App = () => {
   return (
 
-    <div id='app'>
-      <Login />
-
     <div>
       <Navbar />
       <Switch>
-        <Route path="/courses">
+        <Route exact path="/courses">
           <Courses/>
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <HomePage/>
         </Route>
-        <Route path="/profile">
+        <Route exact path="/profile">
           <Profile/>
         </Route>
-        <Route path="/courses/math-mapp">
+        <Route exact path="/login">
+          <Login/>
+        </Route>
+        <Route exact path="/courses/math-mapp">
           <MappScreen />
         </Route>
       </Switch>

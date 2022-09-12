@@ -1,6 +1,5 @@
 class QuestionsController < ApplicationController
-
-  def index
+    def index
     questions = Question.all
     render json: questions
   end
@@ -10,8 +9,7 @@ class QuestionsController < ApplicationController
     if question
     render json: question
     else
-    render json: {error: "Question not found"}, status: :not_found
+    render json: {error: "Question not found"}, status: 404
     end
   end
-
 end
