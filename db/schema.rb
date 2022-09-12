@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_11_152516) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_12_142921) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -19,9 +19,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_152516) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "incorrects", force: :cascade do |t|
+    t.string "incorrect_answer1"
+    t.string "incorrect_answer2"
+    t.integer "question_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_incorrects_on_question_id"
+  end
+
   create_table "questions", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
+    t.integer "question_number"
+    t.string "content"
+    t.string "correct_answer"
     t.integer "quiz_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -30,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_152516) do
 
   create_table "quizzes", force: :cascade do |t|
     t.string "title"
+    t.string "description"
     t.integer "course_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -53,6 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_152516) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "incorrects", "questions"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quizzes", "courses"
   add_foreign_key "user_courses", "courses"
