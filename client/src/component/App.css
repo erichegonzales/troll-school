@@ -5,3 +5,18 @@
     height: 100vh;
     width: 100vh;
 }
+
+.course-star {
+    height: 80px;
+    width: 80px;
+    animation: App-logo-spin infinite 2s alternate;
+}
+
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(60deg);
+    }
+  }
