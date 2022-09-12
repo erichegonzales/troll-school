@@ -34,8 +34,9 @@ const App = () => {
       </Switch>
       </div>
 
-    </div>
-  );
+    // </div>
+    
+    );
   }
 
 export default App;
