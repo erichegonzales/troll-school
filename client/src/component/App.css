@@ -9,10 +9,10 @@
 .course-star {
     height: 80px;
     width: 80px;
-    animation: App-logo-spin infinite 2s alternate;
+    animation: star-spin infinite 2s alternate;
 }
 
-@keyframes App-logo-spin {
+@keyframes star-spin {
     from {
       transform: rotate(0deg);
     }
