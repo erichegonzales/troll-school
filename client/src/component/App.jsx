@@ -8,12 +8,43 @@ import  HomePage from './HomePage'
 import  Profile from './Profile'
 import  Navbar from './Navbar';
 import MappScreen from './MappScreen';
-
+import Quizzes from './Quizzes';
+import { useState, useEffect } from 'react';
 
 const App = () => {
+
+ const[quiz, setQuiz] = useState([])
+    
+
+//  useEffect(() => {
+//         fetch('http://localhost:3000/questions')
+//         .then(req => req.json())
+//         .then(res => setQuiz(res))
+//     }, [])
+
+
+    
+
+    useEffect(() => {
+      const fetchUrl = async () => {
+      const request = await fetch('http://localhost:3000/questions')
+      const resp = await request.json()
+      setQuiz(resp)
+      console.log("hi")
+    }
+      fetchUrl()
+    },[])
+
+
+
+
+
   return (
 
+ 
+
     <div>
+         {console.log(quiz)}
       <Navbar />
       <Switch>
         <Route exact path="/courses">
@@ -23,7 +54,7 @@ const App = () => {
           <HomePage/>
         </Route>
         <Route exact path="/profile">
-          <Profile/>
+          <Profile/>  
         </Route>
         <Route exact path="/login">
           <Login/>
@@ -31,12 +62,13 @@ const App = () => {
         <Route exact path="/courses/math-mapp">
           <MappScreen />
         </Route>
+        <Route exact path="/courses/math-mapp/quizzes">
+          <Quizzes />
+        </Route>
       </Switch>
-      </div>
 
-    // </div>
-    
-    );
-  }
+    </div>
+  );
+}
 
 export default App;
