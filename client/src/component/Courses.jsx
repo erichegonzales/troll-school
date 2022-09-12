@@ -8,7 +8,7 @@ const Courses = () => {
           <Link to="/courses/math-mapp">
             <div className="category cat-1">Math</div>
           </Link>
-          <Link to="/courses/math-mapp">
+          <Link to="/courses/spelling-mapp">
             <div className="category cat-2"> Spelling</div>
           </Link>
         

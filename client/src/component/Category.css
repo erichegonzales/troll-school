@@ -5,6 +5,17 @@
     background-image: var(--background-image-1);
 }
 
+.troll-image {
+    background-color: inherit;
+}
+
+
+
+
+
+
+
+
 .coures-page{
     width: auto;
     height: 100vh;
@@ -111,6 +122,19 @@
     
     margin: 15% 0 5% 0;
 }
+.island4{
+    
+    margin: 15% 0 auto 0;
+
+}
+.island5{
+
+    margin: 5% 0 auto 0;
+}
+.island6{
+    
+    margin: 15% 0 5% 0;
+}
 
 
 .level{
@@ -125,6 +149,7 @@
     color: var(--color-white);
     text-align: center;
     background-color: rgba(101, 90, 70, 0.962);
+    text-decoration: none;
 }
 .level:hover{
     transform: scale(1.03);
@@ -148,6 +173,21 @@
     grid-column: 2;
     grid-row: 2;
 }
+.level4 {
+
+    grid-column: 1;
+    grid-row: 3;
+}
+.level5 {
+
+    grid-column: 3;
+    grid-row: 1;
+}
+.level6 {
+    
+    grid-column: 3;
+    grid-row: 2;
+}
 
 .bg-image {
     background-image: url('https://i.pinimg.com/originals/44/96/58/449658c9cb24e0688af686a341595a64.jpg');
@@ -166,42 +206,20 @@
     background-position: center;
     filter: grayscale(100%);
 }
-
-
-/*test*/
-/*
-
-.page-test {
-    width: auto;
-    height: 100vh;
-    background-image: var(--background-image-1);
-    display: flex;
-    justify-content: center;
+.bg-image4 {
+    background-image: url('https://i.pinimg.com/736x/c9/6e/a8/c96ea8e7ef054e08743e511cf10b82b4--ice-snow.jpg');
+    background-size: cover;
+    background-position: center;
 }
-
-.grid-container{
-  max-height: 800px;
-  max-width: 800px;
+.bg-image5 {
+    background-image: url('https://i.pinimg.com/564x/1d/9f/f5/1d9ff50191c5d562be16319aeb38ecd3.jpg');
+    background-size: cover;
+    background-position: center;
+    
 }
-
-.grid-test {
-
-    display: grid;
-    grid-gap: 5%;  
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-    grid-template-rows: repeat(4, 200px);
-    padding: 0 100px;  
+.bg-image6 {
+    background-image: url('https://i.pinimg.com/564x/51/c2/d9/51c2d990fb9562b2b351a5c60b679f8c.jpg');
+    background-size: cover;
+    background-position: center;
+   
 }
-
-.grid-test a{
-  
-    background-color: var(--color-orange);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    max-width: 300px;
-    min-width: 300px;
-}*/

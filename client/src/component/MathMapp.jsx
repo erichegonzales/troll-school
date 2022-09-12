@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom"
-const MappScreen = () => {
+const MathMapp = () => {
 
 
 
@@ -29,4 +29,4 @@ const MappScreen = () => {
 }
 
 
-export default MappScreen
+export default MathMapp

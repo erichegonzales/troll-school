@@ -7,8 +7,8 @@ import  Courses from './Courses'
 import  HomePage from './HomePage'
 import  Profile from './Profile'
 import  Navbar from './Navbar';
-import MappScreen from './MappScreen';
-
+import MathMapp from './MathMapp';
+import SpellingMapp from './SpellingMapp';
 
 const App = () => {
 
@@ -34,10 +34,10 @@ const App = () => {
           <Login/>
         </Route>
         <Route exact path="/courses/math-mapp">
-          <MappScreen />
+          <MathMapp />
         </Route>
         <Route exact path="/courses/spelling-mapp">
-
+          <SpellingMapp />
         </Route>
       </Switch>
 
