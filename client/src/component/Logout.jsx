@@ -4,18 +4,14 @@ import { Redirect } from "react-router-dom";
 const Logout = () => {
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        function handleSubmit(e) {
+   const handleSubmit = (e) => {
         e.preventDefault();
         setIsLoading(true);
         fetch("http://localhost:3000/logout", {
             method: "DELETE"
-            })
-        }
-        // return <Redirect to="/login" />
-    }
+        })
+        // <Redirect to="/login" />
+   }
 
   return (
    <div id="logout-component">

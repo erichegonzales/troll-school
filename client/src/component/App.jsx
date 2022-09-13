@@ -14,8 +14,8 @@ import MappScreen from './MappScreen';
 const App = () => {
   const [user, setUser] = useState(null);
 
-  // auto-login
   useEffect(() => {
+    // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
@@ -29,17 +29,17 @@ const App = () => {
     <div>
       <Navbar />
       <Switch>
-        <Route exact path="/courses">
-          <Courses/>
-        </Route>
         <Route exact path="/">
           <HomePage/>
+        </Route>
+        <Route exact path="/courses">
+          <Courses/>
         </Route>
         <Route exact path="/profile">
           <Profile/>
         </Route>
         <Route exact path="/login">
-          <Login/>
+          <Login onLogin={setUser}/>
         </Route>
         <Route exact path="/courses/math-mapp">
           <MappScreen />

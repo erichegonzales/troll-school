@@ -7,8 +7,6 @@ const SignUpForm = ({ onLogin }) => {
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [avatar, setAvatar] = useState("");
-  const [bio, setBio] = useState("");
-//   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   function handleSubmit(e) {
@@ -24,17 +22,13 @@ const SignUpForm = ({ onLogin }) => {
         username,
         password,
         password_confirmation: passwordConfirmation,
-        avatar: avatar,
-        bio: bio,
+        avatar: avatar
       }),
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
         r.json().then((user) => onLogin(user));
-      } 
-    //   else {
-    //     r.json().then((err) => setErrors(err.errors));
-    //   }
+      }
     });
     // return <Redirect to="/login" />
   }
@@ -91,16 +85,6 @@ const SignUpForm = ({ onLogin }) => {
                     autoComplete="off"
                     value={avatar}
                     onChange={(e) => setAvatar(e.target.value)}
-                ></input><br />
-
-                <h2>bio</h2>
-                <input 
-                    className='input' 
-                    type='text'
-                    id="bio"
-                    autoComplete="off"
-                    value={bio}
-                    onChange={(e) => setBio(e.target.value)}
                 ></input><br />
 
                 <button type='submit'>Sign me up!</button>
