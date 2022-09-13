@@ -19,25 +19,29 @@
 }
 
 .welcome-message{
-    width: 400px;
+    max-width: 400px;
     text-decoration: none;
     font-size: 1.5rem;
     letter-spacing: 0.05rem;
     color: var(--color-primary)
 }
 
-.welcome-message button {
+.welcome-message .button {
     width: 250px;
     height: auto;
+    color: var(--color-white);
     background-color: var(--color-orange);
     border-radius: 20px;
-    border-color: none;
+    border-color: var(--color-orange);
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
+.welcome-message .button:hover{
+    animation: flash 1s;    
+}
 
 
 

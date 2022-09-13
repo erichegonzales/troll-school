@@ -10,7 +10,7 @@ const HomePage = () => {
         <div className='welcome-message'>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ea repudiandae optio nemo facere sint dolorem vel ipsum exercitationem esse rerum quae voluptates at, in unde ad error dolores nostrum.</p>
           
-          <button>create</button>
+          <div className='welcome-message button'>create</div>
         </div>
 
       </div>
