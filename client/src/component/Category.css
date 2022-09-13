@@ -3,13 +3,39 @@
     width: auto;
     height: 100vh;
     background-image: var(--background-image-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.troll-image {
+.troll{
     background-color: inherit;
+    height: 55vh;
 }
 
+.home-page-container{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.welcome-message{
+    width: 400px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    color: var(--color-primary)
+}
+
+.welcome-message button {
+    width: 250px;
+    height: auto;
+    background-color: var(--color-orange);
+    border-radius: 20px;
+    border-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -27,8 +53,6 @@
 
 }
 
-
-
 .category-container {
     width: calc(140px * 4);
     height: calc(140px * 4);
@@ -40,13 +64,11 @@
     gap: 45px;
 }
 
-
 .category-container a{
     text-decoration: none;
     font-size: 3rem;
     letter-spacing: 0.05rem;
     color: var(--color-white);
-
 }
 
 .category {
