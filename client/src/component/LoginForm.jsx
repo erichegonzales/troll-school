@@ -3,7 +3,7 @@ import {useState} from 'react'
 const LoginForm = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
+//   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   function handleSubmit(e) {
@@ -19,9 +19,10 @@ const LoginForm = ({ onLogin }) => {
       setIsLoading(false);
       if (r.ok) {
         r.json().then((user) => onLogin(user));
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
+      } 
+    //   else {
+    //     r.json().then((err) => setErrors(err.errors));
+    //   }
     });
   }
 
