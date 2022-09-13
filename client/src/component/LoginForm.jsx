@@ -1,17 +1,55 @@
 import {useState} from 'react'
 
-const LoginForm = () => {
+const LoginForm = ({ onLogin }) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setIsLoading(true);
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
+  }
+
     return (
         <>
         <div id='login'>
-        {/* <h1 id='welcome'>Welcome to Troll Tutor!</h1> */}
-        {/* <h2>If you're already signed up to be a Troll tutor, log in here.</h2> */}
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h2>username</h2>
-                <input class='input' type='text'></input><br />
+                <input 
+                    className='input' 
+                    type='text'
+                    id="username"
+                    autoComplete="off"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                ></input><br />
                 <h2>password</h2><h5>(ssshhhh!)</h5>
-                <input class='input' type='password'></input><br />
-                <button type='submit'>Let's go!</button>
+                <input 
+                    className='input' 
+                    type='password'
+                    id="password"
+                    autoComplete="current-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                ></input><br />
+                <button type='submit'>
+                    {isLoading ? "Loading..." : "Let's go!"}
+                </button>
             </form>
         </div>
         </>

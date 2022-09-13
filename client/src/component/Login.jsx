@@ -6,14 +6,14 @@ const Login = ({ onLogin }) => {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-   <div>
+   <div id="login-component">
     <h1 id='welcome'>Welcome to Troll Tutor!</h1>
     {showLogin ? (
     <>
       <h2>Log in to your account:</h2>
       <LoginForm onLogin={onLogin} />
       <br/>
-      <h2>If you haven't signed up yet but want to, ask a parent or guardian for permission, and sign up here!</h2>
+      <h2>If you haven't signed up yet but want to, <br /> ask a parent or guardian for permission and sign up here!</h2>
       <input type='submit' value='Sign Up' onClick={() => setShowLogin(false)}/>
     </>
     ) : (
