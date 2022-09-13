@@ -1,6 +1,6 @@
 import './App.css';
 import Login from './Login'
-
+import React, { useEffect, useState } from "react";
 import './Navbar.css';
 import { Switch, Route } from 'react-router-dom'
 import  Courses from './Courses'
@@ -11,8 +11,20 @@ import MappScreen from './MappScreen';
 
 
 const App = () => {
-  return (
+  const [user, setUser] = useState(null);
 
+  // auto-login
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  if (!user) return <Login onLogin={setUser} />;
+
+  return (
     <div>
       <Navbar />
       <Switch>
