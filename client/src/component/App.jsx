@@ -1,17 +1,22 @@
 import './App.css';
 import Login from './Login'
-
+import './Category.css';
 import './Navbar.css';
 import { Switch, Route } from 'react-router-dom'
 import  Courses from './Courses'
 import  HomePage from './HomePage'
 import  Profile from './Profile'
 import  Navbar from './Navbar';
-import MappScreen from './MappScreen';
-
+import MathMapp from './MathMapp';
+import SpellingMapp from './SpellingMapp';
 
 const App = () => {
+
+
+
   return (
+
+ 
 
     <div>
       <Navbar />
@@ -23,20 +28,21 @@ const App = () => {
           <HomePage/>
         </Route>
         <Route exact path="/profile">
-          <Profile/>
+          <Profile/>  
         </Route>
         <Route exact path="/login">
           <Login/>
         </Route>
         <Route exact path="/courses/math-mapp">
-          <MappScreen />
+          <MathMapp />
+        </Route>
+        <Route exact path="/courses/spelling-mapp">
+          <SpellingMapp />
         </Route>
       </Switch>
-      </div>
 
-    // </div>
-    
-    );
-  }
+    </div>
+  );
+}
 
 export default App;
