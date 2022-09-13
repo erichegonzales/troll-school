@@ -13,14 +13,18 @@ user_1 = User.create(id: 1, name: "Andor", email: "andor@flatiron.com", username
 
 #course = name, description, category
 course_1 = Course.create(id: 1, name: "Math", description: "Math is everywhere. We can practice our math skills while walking through the Swampy Woods.")
+course_2 = Course.create(id: 2, name: "Spelling", description: "Spelling is one of my favorite skills. Putting letters together to make words is like mixing magical ingredients.")
 
 #user_courses = user, course
 user_course_1 = UserCourse.create(id: 1, user: user_1, course: course_1)
+user_course_2 = UserCourse.create(id: 2, user: user_1, course: course_2)
 
 #quizzes = title, description, course
 
 quiz_1 = Quiz.create(id: 1, title: "Quiz 1", description: "Trolls love collecting rocks. Let’s use our addition skills to add up the rocks in my collection.", course: course_1 )
 quiz_2 = Quiz.create(id: 2, title: "Quiz 2", description: "Trolls are generous. They love to give their rocks as gifts. Giving away rocks is a good way to think about subtraction.", course: course_1 )
+quiz_3 = Quiz.create(id: 3, title: "Quiz 1", description: "I want to list my favorite activities. I need help spelling some words so that my friends understand.", course: course_2 )
+quiz_4 = Quiz.create(id: 4, title: "Quiz 2", description: "We’re making painting signs for the Troll Village Flea Market. Everything must be spelled correctly, so everyone knows what we sell.", course: course_2 )
 
 # questions = question_number, content, correct_answer, quiz
 
@@ -33,7 +37,14 @@ question_5 = Question.create(id: 5, number: 1, content: "5 - 1 = ?", correct_ans
 question_6 = Question.create(id: 6, number: 2, content: "4 - 3 = ?", correct_answer: "1", incorrect_answer1: "2", incorrect_answer2: "3", quiz: quiz_2)
 question_7 = Question.create(id: 7, number: 3, content: "4 - 4 = ?", correct_answer: "0", incorrect_answer1: "4", incorrect_answer2: "1", quiz: quiz_2)
 question_8 = Question.create(id: 8, number: 4, content: "7 - 2 = ?", correct_answer: "5", incorrect_answer1: "6", incorrect_answer2: "4", quiz: quiz_2)
-
-
-
+# questions for course 2, quiz 1
+question_9 = Question.create(id: 9, number: 1, content: "Climbing the brances of my favorite tree.", correct_answer: "branches", incorrect_answer1: "Branshes", incorrect_answer2: "Braces", quiz: quiz_3)
+question_10 = Question.create(id: 10, number: 2, content: "At night, we tell stories around the fyer.", correct_answer: "fire", incorrect_answer1: "fyre", incorrect_answer2: "fere", quiz: quiz_3)
+question_11 = Question.create(id: 11, number: 3, content: "Picking friut from the berry bushes and apple trees.", correct_answer: "fruit", incorrect_answer1: "froot", incorrect_answer2: "frute", quiz: quiz_3)
+question_12 = Question.create(id: 12, number: 4, content: "Splashing in podles after it rains.", correct_answer: "puddles", incorrect_answer1: "Pudels", incorrect_answer2: "Podels", quiz: quiz_3)
+# questions for course 2, quiz 2
+question_13 = Question.create(id: 13, number: 1, content: "Frendship Bracelets", correct_answer: "Friendship", incorrect_answer1: "Frindship", incorrect_answer2: "Friendshep", quiz: quiz_4)
+question_14 = Question.create(id: 14, number: 2, content: "Pickture Frames", correct_answer: "Picture", incorrect_answer1: "Peckture", incorrect_answer2: "Picter", quiz: quiz_4)
+question_15 = Question.create(id: 15, number: 3, content: "Second-hand Clotheing", correct_answer: "Clothing", incorrect_answer1: "Cloting", incorrect_answer2: "Clothins", quiz: quiz_4)
+question_16 = Question.create(id: 16, number: 4, content: "Finger Pupetts.", correct_answer: "Puppets", incorrect_answer1: "Pupettes", incorrect_answer2: "Popets", quiz: quiz_4)
 puts 'Done seeding!'
