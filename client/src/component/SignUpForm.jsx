@@ -19,6 +19,7 @@ const SignUpForm = ({ onLogin }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        email,
         username,
         password,
         password_confirmation: passwordConfirmation,
