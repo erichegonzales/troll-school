@@ -30,6 +30,7 @@
 
 }
 
+
 #login-component {
   background-color:  #66fdc1;
   height: 100vh;
@@ -38,4 +39,14 @@
 #signup {
  margin-left: 50vh;
   width: 70vh;
+}
+
+.lesson-template {
+  margin-left: 50vh;
+}
+
+
+
+.answers {
+  margin-left: 40px;
 }
