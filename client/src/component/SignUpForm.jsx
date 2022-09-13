@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const SignUpForm = () => {
+const SignUpForm = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,9 +12,9 @@ const SignUpForm = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setErrors([]);
+    // setErrors([]);
     setIsLoading(true);
-    fetch("/signup", {
+    fetch("http://localhost:3000/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
