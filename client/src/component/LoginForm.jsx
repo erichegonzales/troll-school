@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Redirect } from "react-router-dom";
 
 const LoginForm = ({ onLogin }) => {
   const [username, setUsername] = useState("");
@@ -24,6 +25,7 @@ const LoginForm = ({ onLogin }) => {
     //     r.json().then((err) => setErrors(err.errors));
     //   }
     });
+    // return <Redirect to="/" />
   }
 
     return (

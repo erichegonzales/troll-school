@@ -7,7 +7,7 @@ const Login = ({ onLogin }) => {
 
   return (
    <div id="login-component">
-    <h1 id='welcome'>Welcome to Troll Tutor!</h1>
+    <h1 id='welcome'>Welcome to Troll School!</h1>
     {showLogin ? (
     <>
       <h2>Log in to your account:</h2>

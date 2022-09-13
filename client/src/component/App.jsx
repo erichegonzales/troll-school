@@ -1,5 +1,6 @@
 import './App.css';
 import Login from './Login'
+import Logout from './Logout'
 import React, { useEffect, useState } from "react";
 import './Navbar.css';
 import { Switch, Route } from 'react-router-dom'
@@ -42,6 +43,9 @@ const App = () => {
         </Route>
         <Route exact path="/courses/math-mapp">
           <MappScreen />
+        </Route>
+         <Route exact path="/logout">
+          <Logout/>
         </Route>
       </Switch>
     </div>

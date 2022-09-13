@@ -1,8 +1,10 @@
 class CoursesController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    skip_before_action :authorize
   
     def index
         render json: Course.all
+    end
 
     def show
         course = find_course

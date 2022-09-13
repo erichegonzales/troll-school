@@ -41,3 +41,11 @@
   /* margin-left: 50vh; */
   /* width: 70vh; */
 }
+
+#logout-component {
+  background-color:  #66fdc1;
+  text-align: center;
+  
+  height: 100vh;
+
+}

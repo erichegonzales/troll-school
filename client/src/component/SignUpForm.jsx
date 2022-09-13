@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Redirect } from "react-router-dom";
 
 const SignUpForm = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -35,6 +36,7 @@ const SignUpForm = ({ onLogin }) => {
     //     r.json().then((err) => setErrors(err.errors));
     //   }
     });
+    // return <Redirect to="/login" />
   }
 
     return (
