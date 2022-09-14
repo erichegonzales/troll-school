@@ -12,8 +12,8 @@ puts 'Seeding data...'
 user_1 = User.create(id: 1, name: "Andor", email: "andor@flatiron.com", username: "iluvicecream", avatar: "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Coffee-Bean-Ice-Cream-Cake_exps127341_THCA2449046B01_20_4b_RMS.jpg")
 
 #course = name, description, category
-course_1 = Course.create(id: 1, name: "Math", description: "Math is everywhere. We can practice our math skills while walking through the Swampy Woods.")
-course_2 = Course.create(id: 2, name: "Spelling", description: "Spelling is one of my favorite skills. Putting letters together to make words is like mixing magical ingredients.")
+course_1 = Course.create(id: 1, name: "Math", description: "Math is everywhere. Practicing our math skills will help us in our adventures through all the lands!")
+course_2 = Course.create(id: 2, name: "Spelling", description: "Spelling is a lovely skill. Turning letters into words is like mixing ingredients into magical potions!")
 
 #user_courses = user, course
 user_course_1 = UserCourse.create(id: 1, user: user_1, course: course_1)
