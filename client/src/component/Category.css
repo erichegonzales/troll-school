@@ -120,7 +120,43 @@
     width: auto;
     height: auto;
     background-image: var(--background-image-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.math-mapp-desc {
+  
+  display: flex;
+  width: 90%;
+  background-color: #FFAD60;
+  height: 150px;
+  z-index: 1;
+  /* opacity: 50%; */
+  border-radius: 30px;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #D9534F;
+  font-size: 1.8em;
+  font-weight:bolder;
+}
+.spelling-mapp-desc {
+  
+  display: flex;
+  width: 90%;
+  background-color: #FFAD60;
+  height: 150px;
+  z-index: 1;
+  /* opacity: 50%; */
+  border-radius: 30px;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #D9534F;
+  font-size: 1.8em;
+  font-weight:bolder;
 }
 
 .mapp-screen-container{
