@@ -52,8 +52,12 @@
 .course-page{
     width: auto;
     height: 100vh;
+    background-image: url(
+      https://static.vecteezy.com/system/resources/previews/006/033/139/original/illustration-of-a-summer-forest-landscape-in-cartoon-style-free-vector.jpg);
+    /* background-repeat: no-repeat; */
+
     /* background-image: var(--background-image-1); */
-    background-color: #96CEB4;
+    /* background-color: #96CEB4; */
     display: flex;
     justify-content: center;
     align-items: center;
