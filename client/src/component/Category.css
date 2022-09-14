@@ -48,11 +48,16 @@
 
 
 
-
-.coures-page{
+/* COURSE SCREEN */
+.course-page{
     width: auto;
     height: 100vh;
-    background-image: var(--background-image-1);
+    background-image: url(
+      https://static.vecteezy.com/system/resources/previews/006/033/139/original/illustration-of-a-summer-forest-landscape-in-cartoon-style-free-vector.jpg);
+    /* background-repeat: no-repeat; */
+
+    /* background-image: var(--background-image-1); */
+    /* background-color: #96CEB4; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,13 +80,13 @@
     text-decoration: none;
     font-size: 3rem;
     letter-spacing: 0.05rem;
-    color: var(--color-white);
+    color: #D9534F;
 }
 
 .category {
     width: 250px;
     height: 250px;
-    background-color: var(--color-orange);
+    background-color: #FFAD60;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -89,9 +94,9 @@
 }
 
 .category:hover{
-    transform: scale(1.02);
+    transform: scale(1.22);
     transition-duration: 0.3s;
-    animation: flash 1s;
+    /* animation: flash 1s; */
 }
 
 @keyframes flash {
