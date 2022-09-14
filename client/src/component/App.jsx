@@ -9,6 +9,7 @@ import  Profile from './Profile'
 import  Navbar from './Navbar';
 import MathMapp from './MathMapp';
 import SpellingMapp from './SpellingMapp';
+import LessonTemplate from './LessonTemplate';
 
 
 const App = () => {
@@ -39,6 +40,9 @@ const App = () => {
         </Route>
         <Route exact path="/courses/spelling-mapp">
           <SpellingMapp />
+        </Route>
+        <Route exact path="/courses/quizzes/:id">
+          <LessonTemplate />
         </Route>
       </Switch>
 
