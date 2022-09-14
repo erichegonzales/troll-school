@@ -10,6 +10,7 @@ import  Navbar from './Navbar';
 import MathMapp from './MathMapp';
 import SpellingMapp from './SpellingMapp';
 
+
 const App = () => {
 
 
