@@ -8,6 +8,7 @@ const SpellingMapp = () => {
     return (
         <div className="mapp-screen">
             <div className="mapp-screen-container">
+          <div className="spelling-mapp-desc"><p>Spelling is a lovely skill. Turning letters into words is like mixing ingredients into magical potions.</p></div>
                 <div className="islands island4 bg-image4">
                     <Link to="/courses/quizzes/3" className="level level1"><div >9</div></Link>
                     <Link to="/courses/quizzes/4" className="level level2"><div >10</div></Link>

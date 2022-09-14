@@ -18,6 +18,7 @@ const MathMapp = () => {
     return (
         <div className="mapp-screen">
             <div className="mapp-screen-container">
+          <div className="math-mapp-desc"><p>Math is everywhere. Practicing our math skills will help us in our adventures through all the lands.</p></div>
                 <div className="islands island1 bg-image">
                     <Link to="/courses/quizzes/1" className="level level1"><div >1</div></Link>
                     <Link to="/courses/quizzes/2" className="level level2"><div >2</div></Link>

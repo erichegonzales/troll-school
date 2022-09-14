@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom"
 
+const handleCourseHover = () => {
+}
+
 const Courses = () => {
   return (
     <div className="course-page">
       <div className="category-container">
         
           <Link to="/courses/math-mapp">
-            <div className="category cat-1">Math</div>
+            <div className="category cat-1" onMouseOver={handleCourseHover}>Math</div>
           </Link>
           <Link to="/courses/spelling-mapp">
             <div className="category cat-2"> Spelling</div>
