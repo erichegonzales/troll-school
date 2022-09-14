@@ -1,10 +1,9 @@
 
-const AnswerChoice = ({answer, correctAnswer, cbfunction}) => {
+const AnswerChoice = ({answer, cbfunction}) => {
 
     return (
         <div>
             <h2 onClick={cbfunction}>{answer}</h2>
-           
         </div>
     )
 

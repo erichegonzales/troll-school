@@ -52,10 +52,10 @@ const LessonTemplate = () => {
  
 
     return (
-        <div class="lesson-template">
+        <div className="lesson-template">
             <div>
-                <h1  class="question">{questionArray[question]}</h1>
-                <div class="answers">
+                <h1  className="question">{questionArray[question]}</h1>
+                <div className="answers">
                     <ul>
                         <li><AnswerChoice answer={answers[question].choice1}  cbfunction={incorrect} /></li>
                         <li><AnswerChoice answer={answers[question].choice2}  cbfunction={incorrect} /></li>
