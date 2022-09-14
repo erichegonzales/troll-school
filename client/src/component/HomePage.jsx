@@ -18,8 +18,6 @@ const HomePage = () => {
         </div>
 
       </div>
-      <LessonTemplate />
-
     </div>
   );
 }
