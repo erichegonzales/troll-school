@@ -9,6 +9,7 @@
 .course-star {
     height: 80px;
     width: 80px;
+    padding: 10px;
     animation: star-spin infinite 2s alternate;
 }
 
@@ -22,12 +23,10 @@
   }
 
 #profile-component {
-  background-color:  #66fdc1;
+  background-color: #FFEEAD;
   text-align: center;
-  
-  font-size: 40px;
+  font-size: 25px;
   height: 100vh;
-
 }
 
 
@@ -45,8 +44,80 @@
   margin-left: 50vh;
 }
 
+#profile-component {
+  background-image: url("https://www.lovethesat.com/wp-content/uploads/2017/04/top-fantasy-books-series-teens-2-1080x675.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+}
 
+#profile-greeting {
+  margin-top: 5vh;
+  background-color: #FFEEAD;
+  width: 50%;
+  height: 40%;
+  padding: 10px;
+}
+
+#students-card {
+  margin-top: 10vh;
+  margin-left: 5vh;
+  background-color: white;
+  position: absolute;
+}
 
 .answers {
   margin-left: 40px;
+}
+#progress-list {
+  background-color: #D9534F;
+  width: 50%;
+  height: 40%;
+  position: relative;
+  margin-top: 1vh;
+  margin-left: 44vh;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.student-pic {
+  height: 13vh;
+  width: 13vh;
+  padding: 10px;
+  animation: student-spin infinite 3s alternate;
+  
+}
+
+@keyframes student-spin {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+#user-pic {
+  height:20vh;
+  width: 20vh;
+  border-radius: 25px;
+  background-color: white;
+}
+
+#profile-name-and-pic {
+  margin-top: 10vh;
+  margin-left:3vh;
+  position:absolute;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: #FFAD60;
+}
+
+#magic-items {
+  background-color: white;
+  margin-top: 50vh;
+  margin-left: 48vh;
+  width: 80vh;
+  border-radius: 25px;
+  
 }
