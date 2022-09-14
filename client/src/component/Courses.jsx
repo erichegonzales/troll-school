@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Courses = () => {
   return (
-    <div className="coures-page">
+    <div className="course-page">
       <div className="category-container">
         
           <Link to="/courses/math-mapp">
