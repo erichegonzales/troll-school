@@ -10,7 +10,8 @@ import  Navbar from './Navbar';
 import MathMapp from './MathMapp';
 import SpellingMapp from './SpellingMapp';
 import LessonTemplate from './LessonTemplate';
-
+import ArtMap from './ArtMap';
+import HistoryMap from './HistoryMap';
 
 const App = () => {
 
@@ -41,6 +42,12 @@ const App = () => {
         <Route exact path="/courses/spelling-mapp">
           <SpellingMapp />
         </Route>
+        <Route exact path="/courses/art-mapp">
+          <ArtMap />
+        </Route>
+        <Route exact path="/courses/history-mapp">
+          <HistoryMap />
+        </Route> 
         <Route exact path="/courses/:id/quizzes/:quid">
           <LessonTemplate />
         </Route>
