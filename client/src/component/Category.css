@@ -254,7 +254,11 @@
     background-image: url('https://i.pinimg.com/564x/51/c2/d9/51c2d990fb9562b2b351a5c60b679f8c.jpg');
     background-size: cover;
     background-position: center;
-   
+}
+.bg-image7 {
+    background-image: url('https://t4.ftcdn.net/jpg/02/62/26/95/360_F_262269504_Mv8IByuQn7fTtsgTzRJsJPwg3q5XMzDZ.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -293,11 +297,11 @@
 
   .containerStyles {
     height: auto;
-    width: 400px;
+    width: 800px;
     background-color:gray;
     border-radius: 50px;
     margin: 50px;
-
+    
   }
 
   .fillerStyles {

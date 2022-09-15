@@ -45,7 +45,6 @@ const LessonTemplate = () => {
         }
         else {
           //alert('congrats!')
-          
           setLessonComplete(true)
           setPop(!pop)
         }
@@ -63,7 +62,7 @@ const LessonTemplate = () => {
     // add to progress array in Profile 
 
     return (
-        <div className="lesson-template">
+        <div className="lesson-template bg-image7">
             <div>
                 <h1  className="question">{questionArray[question]}</h1>
                 <div className="answers">
@@ -75,7 +74,7 @@ const LessonTemplate = () => {
                     
                 </div>
             </div>
-            <ProgressBar question={question} questionArray={questionArray}/>
+            <ProgressBar question={question}/>
         </div>
     )
 }
