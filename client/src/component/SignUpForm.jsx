@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { Redirect } from "react-router-dom";
 
-const SignUpForm = ({ onLogin }) => {
+const SignUpForm = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -11,27 +11,28 @@ const SignUpForm = ({ onLogin }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // setErrors([]);
     setIsLoading(true);
-    fetch("http://localhost:3000/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        username,
-        password,
-        password_confirmation: passwordConfirmation,
-        avatar: avatar
-      }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => onLogin(user));
-      }
-    });
-    // return <Redirect to="/login" />
+
+    
+
+    // fetch("http://localhost:3000/signup", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     email,
+    //     username,
+    //     password,
+    //     password_confirmation: passwordConfirmation,
+    //     avatar: avatar
+    //   }),
+    // }).then((r) => {
+    //   setIsLoading(false);
+    //   if (r.ok) {
+    //     r.json().then((user) => setJwt(user));
+    //   }
+    // });
   }
 
     return (

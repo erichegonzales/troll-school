@@ -10,18 +10,21 @@ import  Profile from './Profile'
 import  Navbar from './Navbar';
 import MappScreen from './MappScreen';
 
-
 const App = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // auto-login
-    fetch("/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
-  }, []);
+  const fetchUser = async () => {
+    let res = await fetch("http://localhost:3000/profile", {
+      method: "GET",
+      headers: {
+        "Authorization": `Bearer ${localStorage.getItem("JWT")}`
+    }})
+    let req = await res.json()
+    setUser(req.user)
+  }
+  fetchUser()
+}, [])
 
   if (!user) return <Login onLogin={setUser} />;
 
@@ -39,7 +42,7 @@ const App = () => {
           <Profile/>
         </Route>
         <Route exact path="/login">
-          <Login onLogin={setUser}/>
+          <Login />
         </Route>
         <Route exact path="/courses/math-mapp">
           <MappScreen />
