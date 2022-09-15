@@ -7,9 +7,9 @@ const PopUp = ({cbfunction, lessonComplete}) => {
         
         <div className="alert">
             <div className="alert-div"> 
-                <p>{lessonComplete ? "congrats" : "Ohh NOOOOOOO"}</p>
+          <p>{lessonComplete ? "Congratulations! You are ready for the next stage." : "Try again! ♥"}</p>
                 <button className="alert-btn" onClick={cbfunction}> close</button>
-                {lessonComplete ? <Link to="/courses"><button>Courses</button></Link> : null}
+                {lessonComplete ? <Link to="/courses"><button className="courses-btn">Courses Map</button></Link> : null}
             </div>
         </div>  
     )
