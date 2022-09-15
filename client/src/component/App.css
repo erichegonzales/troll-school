@@ -23,25 +23,46 @@
   }
 
 #profile-component {
-  background-color: #FFEEAD;
+  background-image: url("https://i.pinimg.com/originals/44/ab/8d/44ab8d1fcb53b77f108b229d918a9de9.png");
   text-align: center;
   font-size: 25px;
   height: 100vh;
 }
 
+/* LOGIN PAGE */
 
 #login-component {
+  padding-top: 80px;
   background-color:  #66fdc1;
   height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://ksr-ugc.imgix.net/assets/012/426/478/77600e294f311cfbb682bd2086d64f69_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463760619&auto=format&frame=1&q=92&s=bd4bb0f6819f5393bab4ef27979fa4e8);
 }
 #signup {
- margin-left: 50vh;
-  width: 70vh;
+ align-self: center;
+  width: 50%;
+  /* border: solid red; */
 }
 
+#login {
+  align-self: center;
+  width: 50%;
+}
 
-/* LESSONS */
+.input {
+  background-color: tan;
+    opacity: .85;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#login-component h2 {
+  background-color: tan; opacity: .75;
+  border-radius: 10px;
+  margin: 5px;
+}
 
 .answer-question-container{
   height: 500px;
@@ -81,7 +102,6 @@
   background-color: #FFEEAD;
   opacity: 75%;
   border-radius: 20px;
-  
 }
 
 .answer-choice{
@@ -94,7 +114,6 @@
   font-size: 2.5rem;
   border-radius: 15px;
   cursor:pointer;
-  /* padding: 190px; */
 }
 
 .answer-choice:hover {
@@ -109,15 +128,6 @@
   cursor:pointer;
 }
 
-
-
-#profile-component {
-  background-image: url("https://www.lovethesat.com/wp-content/uploads/2017/04/top-fantasy-books-series-teens-2-1080x675.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;  
-}
-
 #profile-greeting {
   margin-top: 5vh;
   background-color: #FFEEAD;
@@ -130,6 +140,8 @@
   margin-top: 10vh;
   margin-left: 5vh;
   background-color: white;
+  border-style: solid;
+  border-width: thick;
   position: absolute;
 }
 
@@ -142,6 +154,8 @@
   margin-top: 1vh;
   margin-left: 44vh;
   position: absolute;
+  border-style: solid;
+  border-width: thick;
   border-radius: 20px;
 }
 
@@ -165,6 +179,8 @@
 #user-pic {
   height:20vh;
   width: 20vh;
+  border-style: solid;
+  border-width: medium;
   border-radius: 25px;
   background-color: white;
 }
@@ -173,6 +189,8 @@
   margin-top: 10vh;
   margin-left:3vh;
   position:absolute;
+  border-style: solid;
+  border-width: thick;
   border-radius: 25px;
   padding: 15px;
   background-color: #FFAD60;
@@ -183,6 +201,7 @@
   margin-top: 50vh;
   margin-left: 48vh;
   width: 80vh;
+  border-style: solid;
+  border-width: thick;
   border-radius: 25px;
-  
 }
