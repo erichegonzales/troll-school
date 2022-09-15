@@ -4,9 +4,6 @@ import LessonTemplate from './LessonTemplate'
 const HomePage = () => {
   return (
     <div className="home-page">
-
-      
- 
       <div className='home-page-container'>
         <div className='welcome-image'>
           <img src="troll1.png" alt="troll1" className='troll'/>

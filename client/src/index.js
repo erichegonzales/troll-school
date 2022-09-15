@@ -4,12 +4,15 @@ import './index.css';
 import App from './component/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
+import { CanvasProvider } from "./component/CanvasContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <CanvasProvider>
     <App />
+  </CanvasProvider>
   </BrowserRouter>
 );
 
