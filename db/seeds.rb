@@ -34,6 +34,11 @@ quiz_1 = Quiz.create(id: 1, title: "Quiz 1", description: "Trolls love collectin
 quiz_2 = Quiz.create(id: 2, title: "Quiz 2", description: "Trolls are generous. They love to give their rocks as gifts. Giving away rocks is a good way to think about subtraction.", course: course_1 )
 quiz_3 = Quiz.create(id: 3, title: "Quiz 1", description: "I want to list my favorite activities. I need help spelling some words so that my friends understand.", course: course_2 )
 quiz_4 = Quiz.create(id: 4, title: "Quiz 2", description: "We’re making painting signs for the Troll Village Flea Market. Everything must be spelled correctly, so everyone knows what we sell.", course: course_2 )
+# Additional Quizzes added
+quiz_5 = Quiz.create(id: 5, title: "Quiz 3", description: "History Quiz.", course: course_2 )
+quiz_6 = Quiz.create(id: 6, title: "Quiz 3", description: "History Quiz.", course: course_2 )
+quiz_7 = Quiz.create(id: 7, title: "Quiz 4", description: "History Quiz.", course: course_2 )
+quiz_8 = Quiz.create(id: 8, title: "Quiz 4", description: "History Quiz.", course: course_2 )
 
 
 completed_1 = Completed.create(id: 1, user: user_1, quiz: quiz_1)
