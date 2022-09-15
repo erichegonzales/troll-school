@@ -1,13 +1,13 @@
-const ProgressBar = ({question}) => {
+const ProgressBar = ({bar}) => {
 
     
-    const measure = question * 33
-   
+    const measure = bar * 25
+
 
     const fillerStyles = {
     height: '100%',
     width: `${measure}%`,
-    backgroundColor: "red",
+    backgroundColor: "#FFAD60",
     borderRadius: 'inherit',
     textAlign: 'right',
     transition: 'width 1s ease-in-out'

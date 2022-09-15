@@ -10,6 +10,7 @@ const LessonTemplate = () => {
 
     const [pop, setPop] = useState(false)
     const [question, setQuestion] = useState(0)
+    const [bar, setBar] = useState(question)
     const [answers, setAnswers] = useState(['answer1', 'answer2', 'answer3', 'answer4'])
     const [correctAnswer, setCorrectAnswer] = useState(['correct answer'])
     const [lessonComplete, setLessonComplete] =useState(false)
@@ -34,6 +35,12 @@ const LessonTemplate = () => {
         getQuestions()
       }, [id])
     
+
+      const setBar = () => {
+        bar = 4
+      }
+
+
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -45,12 +52,14 @@ const LessonTemplate = () => {
         }
         else {
           //alert('congrats!')
+          setBar(4)
           setLessonComplete(true)
           setPop(!pop)
         }
+
     }
 
-    // console.log(lessonComplete)
+    console.log(lessonComplete)
 
     function incorrect() {
       //  alert("incorrect")
@@ -63,18 +72,20 @@ const LessonTemplate = () => {
 
     return (
         <div className="lesson-template bg-image7">
-            <div>
+            <div className='answer-question-container'>
+              <div>
                 <h1  className="question">{questionArray[question]}</h1>
-                <div className="answers">
-                    <ul>
-                        <li><AnswerChoice answer={answers[question].choice1}  cbfunction={incorrect} pop={pop}/></li>
-                        <li><AnswerChoice answer={answers[question].choice2}  cbfunction={incorrect} /></li>
-                        <li><AnswerChoice answer ={correctAnswer[question]} cbfunction={correct} lessonComplete={lessonComplete}/></li>
-                    </ul>
-                    
+              </div>
+              <div className="answers">
+                  
+                <div><AnswerChoice answer={answers[question].choice1}  cbfunction={incorrect} lessonComplete={lessonComplete} pop={pop}/>
                 </div>
+                <div><AnswerChoice answer={answers[question].choice2}  cbfunction={incorrect} /></div>
+                <div><AnswerChoice answer ={correctAnswer[question]} cbfunction={correct} /></div>
+
+              </div>
             </div>
-            <ProgressBar question={question}/>
+            <ProgressBar bar={bar}/>
         </div>
     )
 }

@@ -1,10 +1,13 @@
 import PopUp from "./PopUp";
 const AnswerChoice = ({answer, cbfunction, pop, lessonComplete}) => {
 
-    return (pop ? <PopUp cbfunction={cbfunction} lessonComplete={lessonComplete}/> : <div><h2 onClick={cbfunction}>{answer}</h2></div>
-        
+    return (
+        <>
+        {pop && <PopUp cbfunction={cbfunction} lessonComplete={lessonComplete}/>} 
+        <div className='answer-choice' onClick={cbfunction}>{answer}   </div>
+        </>
     )
-
+    
 }
 
 export default AnswerChoice;

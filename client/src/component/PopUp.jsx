@@ -1,16 +1,17 @@
 import { useHistory } from "react-router-dom";
 
 const PopUp = ({cbfunction, lessonComplete}) => {
-    const history = useHistory()
+    // const history = useHistory()
     return   (
+        
         <div className="alert">
+            { console.log(lessonComplete)}
             <div className="alert-div"> 
                 <p>{lessonComplete ? "congrats" : "Ohh NOOOOOOO"}</p>
                 <button className="alert-btn" onClick={cbfunction}> close</button>
             </div>
-        </div>
+        </div>  
     )
 }
-
 
 export default PopUp;

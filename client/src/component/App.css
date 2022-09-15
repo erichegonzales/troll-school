@@ -40,6 +40,17 @@
   width: 70vh;
 }
 
+
+/* LESSONS */
+
+.answer-question-container{
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
 .lesson-template {
   width: auto;
     height: 100vh;
@@ -49,6 +60,30 @@
     justify-content: space-around;
     background-image: var(--background-image-1);
 }
+
+.answers{
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+.question{
+  text-align: center;
+}
+
+.answer-choice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #FFAD60;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 
 #profile-component {
   background-image: url("https://www.lovethesat.com/wp-content/uploads/2017/04/top-fantasy-books-series-teens-2-1080x675.webp");
@@ -72,9 +107,7 @@
   position: absolute;
 }
 
-.answers {
-  margin-left: 40px;
-}
+
 #progress-list {
   background-color: #D9534F;
   width: 50%;
