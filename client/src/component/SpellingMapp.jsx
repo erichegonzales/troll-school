@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 
 const SpellingMapp = () => {
   const [description, setDescription] = useState("")
+  const [progress, setProgress] = useState([])
 
   useEffect(() => {
     const getDescription = async () => {
@@ -12,6 +13,33 @@ const SpellingMapp = () => {
       setDescription(res.description)
     }
     getDescription()
+
+    const getInfo = async () => {
+      let req = await fetch("http://localhost:3000/users/1/list")
+      let res = await req.json()
+      let req2 = await fetch("http://localhost:3000/courses/2")
+      let res2 = await req2.json()
+      const spelling = []
+      for (let index in res.quizzes) {
+        let quiz = res.quizzes[index]
+        switch (quiz.course) {
+          case "Spelling":
+            spelling.push(quiz.quiz)
+            break;
+          default:
+            break;
+        }
+      }
+      let finished = []
+      for (let i = 0; i < res2.quizzes.length; i++) {
+        if (spelling.includes(res2.quizzes[i].id)) {
+          finished.push(i+1)
+        }
+      }
+      setProgress(finished)
+    }
+    getInfo()
+
   }, [])
 
 
@@ -20,8 +48,18 @@ const SpellingMapp = () => {
       <div className="mapp-screen-container">
         <div className="spelling-mapp-desc"><p>{ description }</p></div>
         <div className="islands island4 bg-image4">
-          <Link to="/courses/2/quizzes/1" className="level level1"><div >1</div></Link>
-          <Link to="/courses/2/quizzes/1" className="level level2"><div >2</div></Link>
+          <Link to="/courses/2/quizzes/1" className="level level1"><div >
+            {progress.includes(1) ? <img
+              className="course-star"
+              src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png"
+              alt="A star for completing a course"
+            ></img> : 1}
+            </div></Link>
+          <Link to="/courses/2/quizzes/2" className="level level2"><div >{progress.includes(2) ? <img
+            className="course-star"
+            src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png"
+            alt="A star for completing a course"
+          ></img> : 2}</div></Link>
           {/* <div className="level level4">3</div>
                     <div className="level level3">2</div> */}
         </div>
