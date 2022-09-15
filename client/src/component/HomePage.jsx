@@ -14,9 +14,10 @@ const HomePage = () => {
         <div className='welcome-message'>
           <h2>WELCOME TO TROLL SCHOOL! </h2>
 
-          <p>  The best way to understand a subject you're learning is to teach it to someone else. <br /> <br />
-            Troll School is a remote learning application for young learners to practice fundamental school subjects. <br /><br />
-            Our lessons are presented as opportunities to guide friendly troll creatures through their own educational journeys. <br />
+          <p>A remote learning app for young students.<br /><br />
+          The best way to learn a new subject is to teach it to someone else. <br /> <br />
+            
+            Our lessons are presented as opportunities to guide friendly troll creatures through their own educational journeys. <br /> <br />
             Our users gain a stronger, more lasting grasp of their lessons by taking on the role of a helpful mentor.
 
             <br /> <br />  <small>Ready to begin? Click the orange button to create a user profile.</small> </p>
