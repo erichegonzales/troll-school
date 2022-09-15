@@ -60,3 +60,149 @@ question_14 = Question.create(id: 14, number: 2, content: "Pickture Frames", cor
 question_15 = Question.create(id: 15, number: 3, content: "Second-hand Clotheing", correct_answer: "Clothing", incorrect_answer1: "Cloting", incorrect_answer2: "Clothins", quiz: quiz_4)
 question_16 = Question.create(id: 16, number: 4, content: "Finger Pupetts.", correct_answer: "Puppets", incorrect_answer1: "Pupettes", incorrect_answer2: "Popets", quiz: quiz_4)
 puts 'Done seeding!'
+
+# questions for course 4, quiz 4 (History)
+question_17 = Question.create(
+    id: 17, 
+    number: 1, 
+    content: "What was the Boston Tea Party", 
+    correct_answer: "A political protest against British taxation in the American colonies", 
+    incorrect_answer1: "A play shown in theaters in the 18th century", 
+    incorrect_answer2: "A birthday party for George Washington", 
+    quiz: quiz_5
+)
+question_18 = Question.create(
+    id: 18, 
+    number: 2, 
+    content: "What number US president is Joe Biden?", 
+    correct_answer: "46th", 
+    incorrect_answer1: "42nd", 
+    incorrect_answer2: "44th", 
+    quiz: quiz_5
+)
+question_19 = Question.create(
+    id: 19, 
+    number: 3, 
+    content: "Where was the Declaration of Independence signed?", 
+    correct_answer: "Philadelphia", 
+    incorrect_answer1: "Boston", 
+    incorrect_answer2: "Washington DC", 
+    quiz: quiz_5
+)
+question_20 = Question.create(
+    id: 20, 
+    number: 4, 
+    content: "What is the oldest city in the United States?", 
+    correct_answer: "St. Augustine, Florida", 
+    incorrect_answer1: "Philadelphia, Pennsylvania", 
+    incorrect_answer2: "Santa Fe, New Mexico", 
+    quiz: quiz_5
+)
+question_21 = Question.create(
+    id: 21, 
+    number: 1, 
+    content: " Which was the last state to join the US in 1959?", 
+    correct_answer: "Hawaii", 
+    incorrect_answer1: "Arizona", 
+    incorrect_answer2: "Alaska", 
+    quiz: quiz_6
+)
+question_23 = Question.create(
+    id: 23, 
+    number: 2, 
+    content: "Which was the first US city to hold the Olympic Games in 1904??", 
+    correct_answer: "St. Louis, Missouri", 
+    incorrect_answer1: "New York, New York", 
+    incorrect_answer2: "Atlanta, Georgia", 
+    quiz: quiz_6
+)
+question_24 = Question.create(
+    id: 24, 
+    number: 3, 
+    content: "The Statue of Liberty was a gift to the United States from which European country?", 
+    correct_answer: "France", 
+    incorrect_answer1: "Belgium", 
+    incorrect_answer2: "Spain", 
+    quiz: quiz_6
+)
+question_25 = Question.create(
+    id: 25, 
+    number: 4, 
+    content: "Who was the first European visitor to set foot on American soil?  ", 
+    correct_answer: "A Viking explorer named Leif Erikson", 
+    incorrect_answer1: "Christopher Columbus", 
+    incorrect_answer2: "John Smith", 
+    quiz: quiz_6
+)
+question_26 = Question.create(
+    id: 26, 
+    number: 1, 
+    content: "Creatures that lived millions of years ago?", 
+    correct_answer: "Dinosaur", 
+    incorrect_answer1: "Alien", 
+    incorrect_answer2: "Human", 
+    quiz: quiz_7
+)
+question_27 = Question.create(
+    id: 27, 
+    number: 2, 
+    content: "Who was the first man to step on the moon?", 
+    correct_answer: "Neil Armstrong", 
+    incorrect_answer1: "Bob, Marly", 
+    incorrect_answer2: "John, F. Kennedy", 
+    quiz: quiz_7
+)
+question_28 = Question.create(
+    id: 28, 
+    number: 3, 
+    content: "Where did the ancient Olympic Games originate?", 
+    correct_answer: "Greece", 
+    incorrect_answer1: "England", 
+    incorrect_answer2: "Portugal", 
+    quiz: quiz_7
+)
+question_29 = Question.create(
+    id: 29, 
+    number: 4, 
+    content: "Which was the first country to use paper money? ", 
+    correct_answer: "China", 
+    incorrect_answer1: "India", 
+    incorrect_answer2: "Germany", 
+    quiz: quiz_7
+)
+question_30 = Question.create(
+    id: 30, 
+    number: 1, 
+    content: "Which is the oldest University in the U.S.?", 
+    correct_answer: "Harvard", 
+    incorrect_answer1: "Princeton", 
+    incorrect_answer2: "NYU", 
+    quiz: quiz_8
+)
+question_31 = Question.create(
+    id: 31, 
+    number: 2, 
+    content: "Who did the U.S. buy Florida from?", 
+    correct_answer: "Spain", 
+    incorrect_answer1: "Portugal", 
+    incorrect_answer2: "France", 
+    quiz: quiz_8
+)
+question_32 = Question.create(
+    id: 32, 
+    number: 3, 
+    content: "Who wrote Harry Potter?", 
+    correct_answer: "J. K. Rowling", 
+    incorrect_answer1: "Jay-Z", 
+    incorrect_answer2: "Stephen King", 
+    quiz: quiz_8
+)
+question_33 = Question.create(
+    id: 33, 
+    number: 4, 
+    content: "Where did Albert Einstein live before moving to the United States? ", 
+    correct_answer: "Germany", 
+    incorrect_answer1: "Sweden", 
+    incorrect_answer2: "Italy", 
+    quiz: quiz_8
+)
