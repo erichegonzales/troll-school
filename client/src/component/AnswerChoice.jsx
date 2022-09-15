@@ -1,10 +1,8 @@
+import PopUp from "./PopUp";
+const AnswerChoice = ({answer, cbfunction, pop, lessonComplete}) => {
 
-const AnswerChoice = ({answer, cbfunction}) => {
-
-    return (
-        <div>
-            <h2 onClick={cbfunction}>{answer}</h2>
-        </div>
+    return (pop ? <PopUp cbfunction={cbfunction} lessonComplete={lessonComplete}/> : <div><h2 onClick={cbfunction}>{answer}</h2></div>
+        
     )
 
 }

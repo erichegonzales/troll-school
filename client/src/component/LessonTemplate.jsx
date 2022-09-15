@@ -1,21 +1,20 @@
 import { useState, useEffect } from 'react'
 import AnswerChoice from './AnswerChoice'
 import { useParams } from 'react-router-dom'
-
+import ProgressBar from './ProgressBar'
 
 
 
 
 const LessonTemplate = () => {
 
+    const [pop, setPop] = useState(false)
     const [question, setQuestion] = useState(0)
     const [answers, setAnswers] = useState(['answer1', 'answer2', 'answer3', 'answer4'])
     const [correctAnswer, setCorrectAnswer] = useState(['correct answer'])
     const [lessonComplete, setLessonComplete] =useState(false)
     const [questionArray, setQuestionArray] =useState([])
-
     const { id } = useParams()
-
 
     useEffect(() => {
         const getQuestions = async () => {
@@ -45,18 +44,23 @@ const LessonTemplate = () => {
             setQuestion(question + 1)
         }
         else {
-          alert('congrats!')
+          //alert('congrats!')
+          
           setLessonComplete(true)
+          setPop(!pop)
         }
     }
 
+    // console.log(lessonComplete)
+
     function incorrect() {
-        alert("incorrect")
+      //  alert("incorrect")
+      setPop(!pop)
+
     }
 
     // if question array number is less than questions.length, load question +1 else 
     // add to progress array in Profile 
- 
 
     return (
         <div className="lesson-template">
@@ -64,13 +68,14 @@ const LessonTemplate = () => {
                 <h1  className="question">{questionArray[question]}</h1>
                 <div className="answers">
                     <ul>
-                        <li><AnswerChoice answer={answers[question].choice1}  cbfunction={incorrect} /></li>
+                        <li><AnswerChoice answer={answers[question].choice1}  cbfunction={incorrect} pop={pop}/></li>
                         <li><AnswerChoice answer={answers[question].choice2}  cbfunction={incorrect} /></li>
-
-                        <li><AnswerChoice answer ={correctAnswer[question]} cbfunction={correct}/></li>
+                        <li><AnswerChoice answer ={correctAnswer[question]} cbfunction={correct} lessonComplete={lessonComplete}/></li>
                     </ul>
+                    
                 </div>
             </div>
+            <ProgressBar question={question} questionArray={questionArray}/>
         </div>
     )
 }
