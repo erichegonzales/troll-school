@@ -9,7 +9,7 @@ const HomePage = () => {
  
       <div className='home-page-container'>
         <div className='welcome-image'>
-          <img src="troll1.png" alt="troll1" className='troll'/>
+          <img src="troll-flower.png" alt="troll1" className='troll'/>
         </div>
         <div className='welcome-message'>
           <h2>WELCOME TO TROLL SCHOOL! </h2>
