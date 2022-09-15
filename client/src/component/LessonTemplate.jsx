@@ -37,11 +37,9 @@ const LessonTemplate = () => {
       }, [quid, id])
     
 
-
-
-    function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    // function getRndInteger(min, max) {
+    //     return Math.floor(Math.random() * (max - min + 1)) + min;
+    // }
 
     function correct() {
         // alert("correct")
@@ -69,6 +67,13 @@ const LessonTemplate = () => {
     // if question array number is less than questions.length, load question +1 else 
     // add to progress array in Profile 
 
+  const rand1 = Math.floor(Math.random() * 3)
+  const rand2 = 1 + Math.floor(Math.random() * 2)
+
+  const choices = [<div><AnswerChoice answer={answers[question].choice1} cbfunction={incorrect} lessonComplete={lessonComplete} pop={pop} /></div>,
+    <div><AnswerChoice answer={answers[question].choice2} cbfunction={incorrect} /></div>,
+    <div><AnswerChoice answer={correctAnswer[question]} cbfunction={correct} /></div> ]
+
     return (
         <div className="lesson-template bg-image7">
             <div className='answer-question-container'>
@@ -76,11 +81,10 @@ const LessonTemplate = () => {
                 <h1  className="question">{questionArray[question]}</h1>
               </div>
               <div className="answers">
-                  
-                <div><AnswerChoice answer={answers[question].choice1}  cbfunction={incorrect} lessonComplete={lessonComplete} pop={pop}/>
-                </div>
-                <div><AnswerChoice answer={answers[question].choice2}  cbfunction={incorrect} /></div>
-                <div><AnswerChoice answer ={correctAnswer[question]} cbfunction={correct} /></div>
+              
+              {choices[rand1]}
+              {choices[(rand1 + rand2) % 3]}
+              {choices[(rand1 + rand2 + rand2) % 3]}
 
               </div>
             </div>
