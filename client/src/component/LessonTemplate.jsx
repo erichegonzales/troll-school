@@ -10,7 +10,7 @@ const LessonTemplate = () => {
 
     const [pop, setPop] = useState(false)
     const [question, setQuestion] = useState(0)
-    const [bar, setBar] = useState(question)
+    const [bar, setBar] = useState(0)
     const [answers, setAnswers] = useState(['answer1', 'answer2', 'answer3', 'answer4'])
     const [correctAnswer, setCorrectAnswer] = useState(['correct answer'])
     const [lessonComplete, setLessonComplete] =useState(false)
@@ -36,9 +36,6 @@ const LessonTemplate = () => {
       }, [id])
     
 
-      const setBar = () => {
-        bar = 4
-      }
 
 
     function getRndInteger(min, max) {
@@ -49,10 +46,11 @@ const LessonTemplate = () => {
         // alert("correct")
         if (question < questionArray.length - 1) {
             setQuestion(question + 1)
+            setBar(bar + 1)
         }
         else {
           //alert('congrats!')
-          setBar(4)
+          setBar(bar + 1)
           setLessonComplete(true)
           setPop(!pop)
         }
