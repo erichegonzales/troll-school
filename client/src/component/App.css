@@ -29,15 +29,39 @@
   height: 100vh;
 }
 
+/* LOGIN PAGE */
 
 #login-component {
+  padding-top: 80px;
   background-color:  #66fdc1;
   height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://ksr-ugc.imgix.net/assets/012/426/478/77600e294f311cfbb682bd2086d64f69_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463760619&auto=format&frame=1&q=92&s=bd4bb0f6819f5393bab4ef27979fa4e8);
 }
 #signup {
- margin-left: 50vh;
-  width: 70vh;
+ align-self: center;
+  width: 50%;
+  /* border: solid red; */
+}
+
+#login {
+  align-self: center;
+  width: 50%;
+}
+
+.input {
+  background-color: tan;
+    opacity: .85;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#login-component h2 {
+  background-color: tan; opacity: .75;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .answer-question-container{
