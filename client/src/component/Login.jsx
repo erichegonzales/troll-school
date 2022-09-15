@@ -11,9 +11,9 @@ const Login = () => {
       <div id='login'>
       <form>
         <h2>email</h2>
-      <input class='input' type='email'></input><br />
+      <input className='input' type='email'></input><br />
       <h2>password</h2><h5>(ssshhhh!)</h5>
-      <input class='input' type='password'></input><br />
+      <input className='input' type='password'></input><br />
       <button type='submit'>Let's go!</button>
       </form>
       </div>
@@ -21,9 +21,9 @@ const Login = () => {
       <h2>If you haven't signed up yet but want to, ask a parent or guardian for permission and enter your email here!</h2>
       <form>
         <h2>email</h2>
-      <input class='input' type='email'></input><br />
+      <input className='input' type='email'></input><br />
       <h2>password</h2>
-      <input class='input' type='password'></input><br />
+      <input className='input' type='password'></input><br />
       <button type='submit'>Sign me up!</button>
       </form>
 

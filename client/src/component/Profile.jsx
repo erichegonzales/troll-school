@@ -34,11 +34,11 @@ const [magicItems, setMagicItems] =useState(["Shiny Rock", "Stinky Boat", "Schop
         Students Helped:
         <div id="students"> 
          {studentsHelped[0].name} <br />
-         <img class="student-pic"src={studentsHelped[0].img} />
+         <img className="student-pic"src={studentsHelped[0].img} />
          {studentsHelped[1].name} <br />
-         <img class="student-pic"src={studentsHelped[1].img} /> <br />
+         <img className="student-pic"src={studentsHelped[1].img} /> <br />
          {studentsHelped[2].name} <br />
-         <img class="student-pic"src={studentsHelped[2].img} />
+         <img className="student-pic"src={studentsHelped[2].img} />
          </div>
       </wired-card>
       
@@ -47,7 +47,7 @@ const [magicItems, setMagicItems] =useState(["Shiny Rock", "Stinky Boat", "Schop
         {
         spellingProgress.map(course => {
           return(
-              <img class="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
+              <img className="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
           )
         })
       } <br />
@@ -55,7 +55,7 @@ const [magicItems, setMagicItems] =useState(["Shiny Rock", "Stinky Boat", "Schop
         {
             mathProgress.map(course => {
               return(
-                  <img class="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
+                  <img className="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
               )
             })
           } <br/>
@@ -63,7 +63,7 @@ const [magicItems, setMagicItems] =useState(["Shiny Rock", "Stinky Boat", "Schop
           {
         artProgress.map(course => {
           return(
-              <img class="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
+              <img className="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
           )
         })
       } <br/>
@@ -72,7 +72,7 @@ const [magicItems, setMagicItems] =useState(["Shiny Rock", "Stinky Boat", "Schop
         historyProgress.map(course => {
           return(
             // <div>
-              <img class="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
+              <img className="course-star" src="https://www.clipartmax.com/png/full/286-2866206_star-small-stars-yellow-transparent.png" alt="A star for completing a course"></img>
             // </div>
           )
         })
