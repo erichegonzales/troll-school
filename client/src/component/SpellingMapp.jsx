@@ -21,7 +21,7 @@ const SpellingMapp = () => {
         <div className="spelling-mapp-desc"><p>{ description }</p></div>
         <div className="islands island4 bg-image4">
           <Link to="/courses/2/quizzes/1" className="level level1"><div >1</div></Link>
-          <Link to="/courses/2/quizzes/1" className="level level2"><div >2</div></Link>
+          <Link to="/courses/2/quizzes/2" className="level level2"><div >2</div></Link>
           {/* <div className="level level4">3</div>
                     <div className="level level3">2</div> */}
         </div>
