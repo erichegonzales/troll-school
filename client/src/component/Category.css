@@ -177,7 +177,6 @@
 }
 
 
-
 .island1{
     
     margin: auto 0 auto 0;
@@ -293,8 +292,6 @@
 }
 
 
-
-
 /*ALERT POPUP*/
 .alert{
     position: fixed;
@@ -306,6 +303,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border-radius: 20px; */
 }
 
 .alert-div{
@@ -314,14 +312,38 @@
     width: 100%;
     max-width: 640px;
     background-color: var(--color-orange);
+    border-radius: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    border: solid rgb(238, 174, 77);
+    border-width: 5px;
+    
 }
 
 .alert-btn{
     position: absolute;
     top: 16px;
     right: 16px;
+    border-radius: 5px;
+    background-color: silver;
+    border-style: double;
+    border-width: 3px;
+    font-size: 15px;
+    cursor: pointer;
 }
 
+.courses-btn {
+  position: absolute;
+  top: 180px;
+  right: 270px;
+  border-radius: 5px;
+    background-color: silver;
+    border-style: double;
+    border-width: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
 
 
 /*PROGRESS BAR*/
