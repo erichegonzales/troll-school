@@ -48,6 +48,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_15_170644) do
     t.index ["course_id"], name: "index_quizzes_on_course_id"
   end
 
+  create_table "user_courses", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "course_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_user_courses_on_course_id"
+    t.index ["user_id"], name: "index_user_courses_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -62,4 +71,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_15_170644) do
   add_foreign_key "completeds", "users"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quizzes", "courses"
+  add_foreign_key "user_courses", "courses"
+  add_foreign_key "user_courses", "users"
 end
