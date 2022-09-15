@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   resources :quizzes, only: [:index, :show]
 
   get "/courses/:id/quiz/:quid", to: "courses#quiz"
+
+  get "/users/:id/list", to: "users#list_index"
+  post "/users/:id/list/add/:quid", to: "users#list_create"
+  delete "/users/:id/list", to: "users#list_destroy"
 end

@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts 'Destroying any old seed data...'
+
+User.destroy_all
+Course.destroy_all
+Quiz.destroy_all
+Question.destroy_all
+Completed.destroy_all
+
 puts 'Seeding data...'
 
 #user = name, email, username, password, avatar
@@ -16,8 +24,9 @@ course_1 = Course.create(id: 1, name: "Math", description: "Math is everywhere. 
 course_2 = Course.create(id: 2, name: "Spelling", description: "Spelling is a lovely skill. Turning letters into words is like mixing ingredients into magical potions!")
 
 #user_courses = user, course
-user_course_1 = UserCourse.create(id: 1, user: user_1, course: course_1)
-user_course_2 = UserCourse.create(id: 2, user: user_1, course: course_2)
+# user_course_1 = UserCourse.create(id: 1, user: user_1, course: course_1)
+# user_course_2 = UserCourse.create(id: 2, user: user_1, course: course_2)
+
 
 #quizzes = title, description, course
 
@@ -25,6 +34,9 @@ quiz_1 = Quiz.create(id: 1, title: "Quiz 1", description: "Trolls love collectin
 quiz_2 = Quiz.create(id: 2, title: "Quiz 2", description: "Trolls are generous. They love to give their rocks as gifts. Giving away rocks is a good way to think about subtraction.", course: course_1 )
 quiz_3 = Quiz.create(id: 3, title: "Quiz 1", description: "I want to list my favorite activities. I need help spelling some words so that my friends understand.", course: course_2 )
 quiz_4 = Quiz.create(id: 4, title: "Quiz 2", description: "We’re making painting signs for the Troll Village Flea Market. Everything must be spelled correctly, so everyone knows what we sell.", course: course_2 )
+
+
+completed_1 = Completed.create(id: 1, user: user_1, quiz: quiz_1)
 
 # questions = question_number, content, correct_answer, quiz
 

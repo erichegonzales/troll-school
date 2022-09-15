@@ -15,6 +15,7 @@ const LessonTemplate = () => {
     const [correctAnswer, setCorrectAnswer] = useState(['correct answer'])
     const [lessonComplete, setLessonComplete] =useState(false)
     const [questionArray, setQuestionArray] =useState([])
+    const [quizId, setQuizId] = useState(0)
     const { id, quid } = useParams()
 
     useEffect(() => {
@@ -30,10 +31,10 @@ const LessonTemplate = () => {
           setAnswers(res.questions.map((ques) => {
             return {choice1: ques.incorrect_answer1, choice2:ques.incorrect_answer2}
           }))
-          
+          setQuizId(res.id)
         }
         getQuestions()
-      }, [id])
+      }, [quid, id])
     
 
 
@@ -53,11 +54,11 @@ const LessonTemplate = () => {
           setBar(bar + 1)
           setLessonComplete(true)
           setPop(!pop)
+          fetch(`http://localhost:3000/users/1/list/add/${quizId}`, { method: 'POST' })
         }
 
     }
 
-    console.log(lessonComplete)
 
     function incorrect() {
       //  alert("incorrect")
