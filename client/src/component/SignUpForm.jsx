@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { Redirect } from "react-router-dom";
 
-const SignUpForm = ({ onLogin }) => {
+const SignUpForm = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
