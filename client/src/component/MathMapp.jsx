@@ -21,16 +21,16 @@ getDescription()
       <div className="mapp-screen-container">
         <div className="math-mapp-desc"><p>{ description }</p></div>
         <div className="islands island1 bg-image">
-          <Link to="/courses/quizzes/1" className="level level1"><div >1</div></Link>
-          <Link to="/courses/quizzes/2" className="level level2"><div >2</div></Link>
-          <Link to="/courses/quizzes/3" className="level level3"><div >3</div></Link>
+          <Link to="/courses/1/quizzes/1" className="level level1"><div >1</div></Link>
+          <Link to="/courses/1/quizzes/2" className="level level2"><div >2</div></Link>
+          <Link to="/courses/1/quizzes/3" className="level level3"><div >3</div></Link>
           {/* <div className="level level2">3< /div>
                     <div className="level level3">2</div> */}
         </div>
         <div className="islands island2 bg-image2" >
-          <Link to="/courses/quizzes/1" className="level level1"><div >4</div></Link>
-          <Link to="/courses/quizzes/1" className="level level2"><div >5</div></Link>
-          <Link to="/courses/quizzes/1" className="level level3"><div >6</div></Link>
+          <Link to="/courses/1/quizzes/1" className="level level1"><div >4</div></Link>
+          <Link to="/courses/1/quizzes/1" className="level level2"><div >5</div></Link>
+          <Link to="/courses/1/quizzes/1" className="level level3"><div >6</div></Link>
           {/* <div className="level level1">4</div>
                     <div className="level level2">5</div>
                     <div className="level level3">6</div> */}

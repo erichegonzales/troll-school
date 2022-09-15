@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
 
     def quiz
         course = find_course
-        render json: course.quizzes.find(params[:quid])
+        render json: course.quizzes[params[:quid].to_i - 1].to_json(methods: [:questions])
     end
 
     private
