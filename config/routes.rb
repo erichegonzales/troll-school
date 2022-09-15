@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :user_courses, only: [:index, :show]
   resources :questions, only: [:index, :show]
   resources :quizzes, only: [:index, :show]
+
+  get "/courses/:id/quiz/:quid", to: "courses#quiz"
 end
