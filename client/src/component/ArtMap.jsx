@@ -22,7 +22,7 @@ const [description, setDescription] = useState("")
     <div className="mapp-screen">
       <div className="mapp-screen-container">
         <div className="spelling-mapp-desc"><p>{description}</p></div>
-        <div className="islands island4 bg-image7">
+        <div className="islands island4 bg-image13">
           <Link to="/courses/art-mapp/questions/1" className="level level2"><div >1</div></Link>
           <Link to="/courses/art-mapp/questions/1" className="level level3"><div >2</div></Link>
           <Link to="/courses/art-mapp/questions/1" className="level level1"><div >3</div></Link>
