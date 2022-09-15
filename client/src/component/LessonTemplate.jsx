@@ -15,11 +15,11 @@ const LessonTemplate = () => {
     const [correctAnswer, setCorrectAnswer] = useState(['correct answer'])
     const [lessonComplete, setLessonComplete] =useState(false)
     const [questionArray, setQuestionArray] =useState([])
-    const { id } = useParams()
+    const { id, quid } = useParams()
 
     useEffect(() => {
         const getQuestions = async () => {
-          let req = await fetch(`http://localhost:3000/quizzes/${id}`)
+          let req = await fetch(`http://localhost:3000/courses/${id}/quiz/${quid}`)
           let res = await req.json()
           setQuestionArray(res.questions.map((ques) => {
             return ques.content

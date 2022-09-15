@@ -41,7 +41,7 @@ const App = () => {
         <Route exact path="/courses/spelling-mapp">
           <SpellingMapp />
         </Route>
-        <Route exact path="/courses/quizzes/:id">
+        <Route exact path="/courses/:id/quizzes/:quid">
           <LessonTemplate />
         </Route>
       </Switch>

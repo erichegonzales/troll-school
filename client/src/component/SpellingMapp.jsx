@@ -20,23 +20,23 @@ const SpellingMapp = () => {
       <div className="mapp-screen-container">
         <div className="spelling-mapp-desc"><p>{ description }</p></div>
         <div className="islands island4 bg-image4">
-          <Link to="/courses/quizzes/3" className="level level1"><div >9</div></Link>
-          <Link to="/courses/quizzes/4" className="level level2"><div >10</div></Link>
+          <Link to="/courses/2/quizzes/1" className="level level1"><div >1</div></Link>
+          <Link to="/courses/2/quizzes/1" className="level level2"><div >2</div></Link>
           {/* <div className="level level4">3</div>
                     <div className="level level3">2</div> */}
         </div>
         <div className="islands island5 bg-image5" >
-          <Link to="/courses/math-mapp/questions/1" className="level level2"><div >11</div></Link>
-          <Link to="/courses/math-mapp/questions/1" className="level level3"><div >12</div></Link>
-          <Link to="/courses/math-mapp/questions/1" className="level level5"><div >13</div></Link>
+          <Link to="/courses/math-mapp/questions/1" className="level level2"><div >3</div></Link>
+          <Link to="/courses/math-mapp/questions/1" className="level level3"><div >4</div></Link>
+          <Link to="/courses/math-mapp/questions/1" className="level level5"><div >5</div></Link>
           {/* <div className="level level2">4</div>
                     <div className="level level3">5</div>
                     <div className="level level5">6</div> */}
         </div>
         <div className="islands island6 bg-image6">
-          <Link to="/courses/math-mapp/questions/1" className="level level2"><div >14</div></Link>
-          <Link to="/courses/math-mapp/questions/1" className="level level3"><div >15</div></Link>
-          <Link to="/courses/math-mapp/questions/1" className="level level6"><div >16</div></Link>
+          <Link to="/courses/math-mapp/questions/1" className="level level2"><div >6</div></Link>
+          <Link to="/courses/math-mapp/questions/1" className="level level3"><div >7</div></Link>
+          <Link to="/courses/math-mapp/questions/1" className="level level6"><div >8</div></Link>
           {/* <div className="level level2">8</div>
                     <div className="level level3">7</div>
                     <div className="level level6">7</div> */}
