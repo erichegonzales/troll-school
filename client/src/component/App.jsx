@@ -9,7 +9,6 @@ import  HomePage from './HomePage'
 import  Profile from './Profile'
 import  Navbar from './Navbar';
 import MappScreen from './MappScreen';
-// const UserContext = createContext({})
 
 const App = () => {
   const [user, setUser] = useState({});
