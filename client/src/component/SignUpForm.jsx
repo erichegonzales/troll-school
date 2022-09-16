@@ -38,68 +38,75 @@ const SignUpForm = ({ user, setUser }) => {
   return (
     <>
       <div id="signup">
+    
         <form onSubmit={handleSubmit}>
-          <h2>name</h2>
+          <label className="signupLabel">name: </label>
           <input
             className="input"
             type="text"
             id="name"
             autoComplete="off"
+            placeholder="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-          ></input>
+                ></input>
           <br />
 
-          <h2>email</h2>
+          <label className="signupLabel">email: </label>
           <input
             className="input"
             type="email"
             id="email"
             autoComplete="off"
+            placeholder="email@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <br />
 
-          <h2>username</h2>
+          <label className="signupLabel">username: </label>
           <input
             className="input"
             type="text"
             id="username"
             autoComplete="off"
+            placeholder="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           ></input>
           <br />
 
-          <h2>password</h2>
+          <label className="signupLabel">password: </label>
           <input
             className="input"
             type="password"
             id="password"
             autoComplete="current-password"
+            placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></input>
           <br />
 
-          <h2>password confirmation</h2>
+          <label className="signupLabel">confirm password: </label>
           <input
             className="input"
             type="password"
             id="password_confirmation"
             autoComplete="current-password"
+            placeholder="confirm password"
             value={passwordConfirmation}
             onChange={(e) => setPasswordConfirmation(e.target.value)}
           ></input>
           <br />
 
-          <h2>avatar</h2>
+          <label className="signupLabel">avatar: </label>
           <input
             className="input"
             type="text"
             id="avatar"
             autoComplete="off"
+            placeholder="avatar"
             value={avatar}
             onChange={(e) => setAvatar(e.target.value)}
           ></input>
@@ -107,7 +114,6 @@ const SignUpForm = ({ user, setUser }) => {
 
           <button type="submit">Sign me up!</button>
         </form>
-        <br />
       </div>
     </>
   );
