@@ -53,7 +53,7 @@
 #logout-component {
   background-color:  #66fdc1;
   text-align: center;
-  
+  display: flex;
   height: 100vh;
 
  align-self: center;
@@ -69,6 +69,7 @@
   width: 50%;
   background-color: skyblue; opacity: 0.85;
   border-radius: 40px;
+  /* justify-content: right; */
   /* border-style: dashed; opacity: 0.85; */
 }
 
@@ -79,9 +80,13 @@
     border-style: solid;
     border-width: 3px;
     border-color: dodgerblue;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     color: black;
-    font-weight: 400;
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px;
 }
 
 #login-component h2 {
