@@ -19,6 +19,8 @@ import HistoryMap from './HistoryMap';
 const App = () => {
   const [user, setUser] = useState({});
 
+  console.log(user)
+
   useEffect(() => {
   const fetchUser = async () => {
     let res = await fetch("http://localhost:3000/profile", {
@@ -54,19 +56,19 @@ const App = () => {
           <Logout user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/math-mapp">
-          <MathMapp />
+          <MathMapp user={user} />
         </Route>
         <Route exact path="/courses/spelling-mapp">
-          <SpellingMapp />
+          <SpellingMapp user={user} />
         </Route>
         <Route exact path="/courses/art-mapp">
-          <ArtMap />
+          <ArtMap user={user} />
         </Route>
         <Route exact path="/courses/history-mapp">
-          <HistoryMap />
+          <HistoryMap user={user} />
         </Route>
         <Route exact path="/courses/:id/quizzes/:quid">
-          <LessonTemplate />
+          <LessonTemplate user={user} />
         </Route>
       </Switch>
     </div>

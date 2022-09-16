@@ -1,11 +1,8 @@
 import { useState, useContext } from 'react'
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
-// import UserContext from "./App"
 
 const Login = ({ user, setUser }) => {
-  // const user = useContext(UserContext);
-  // console.log(user)
   const [showLogin, setShowLogin] = useState(true);
 
   return (

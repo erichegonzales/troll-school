@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { WiredCard } from "wired-elements";
 import "wired-elements";
 
-function Profile() {
-  const [user, setUser] = useState("Kid who Made a Profile");
+function Profile({ user }) {
+  const [userFiller, setUserFiller] = useState("Kid who Made a Profile");
   const [userProfilePic, setUserProfilePic] = useState(
     "https://www.pngrepo.com/png/380324/512/costume-ghost-goblin-halloween-horror.png"
   );
@@ -34,7 +34,7 @@ function Profile() {
 
   useEffect( () => {
     const getInfo = async () => {
-      let req = await fetch("http://localhost:3000/users/1/list")
+      let req = await fetch(`http://localhost:3000/users/${user.id}/list`)
       let res = await req.json()
       const math = []
       const spelling = []
@@ -68,7 +68,7 @@ function Profile() {
   }, [])
 
   const deleteProgress = async () => {
-    fetch("http://localhost:3000/users/1/list", {method: 'DELETE'})
+    fetch(`http://localhost:3000/users/${user.id}/list`, {method: 'DELETE'})
     setMathProgress([])
     setHistoryProgress([])
     setArtProgress([])
@@ -84,12 +84,12 @@ function Profile() {
     <div id="profile-component">
       <div id="profile-name-and-pic">
         <img id="user-pic" src={userProfilePic} alt="user" /> <br />
-        {user}
+        {user.avatar}
       </div>
 
       <div>
         <wired-card id="profile-greeting" elevation="3">
-          <h2>Hello {user}! </h2>
+          <h2>Hello {user.name}! </h2>
           Here is where you can see your lesson progress. For every lesson you
           complete, you get a star!
         </wired-card>

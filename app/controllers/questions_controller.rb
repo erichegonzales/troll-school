@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
- 
-    def index
+  skip_before_action :authorized
+
+  def index
     render json: Question.all
   end
 

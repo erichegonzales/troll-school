@@ -1,4 +1,4 @@
-const ProgressBar = ({bar}) => {
+const ProgressBar = ({ bar }) => {
 
     
     const measure = bar * 25
