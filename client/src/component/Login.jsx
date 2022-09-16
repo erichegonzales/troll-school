@@ -22,7 +22,7 @@ const Login = ({ user, setUser }) => {
         </>
       ) : (
         <>
-          <h2>Create a new account:</h2>
+          <h1>Create a new account:</h1>
           <SignUpForm user={user} setUser={setUser} />
           <h2>If you're already signed up to be a Troll tutor, log in here!</h2>
           <input type='submit' value='Log In' onClick={() => setShowLogin(true)} />
