@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 
-const ArtMap = () => {
+const ArtMap = ({ user }) => {
 
 const [description, setDescription] = useState("")
 

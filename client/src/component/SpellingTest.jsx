@@ -1,8 +1,8 @@
 import LessonTemplate from "./LessonTemplate"
 
-const SpellingTest = () => {
+const SpellingTest = ({ user }) => {
     return(
-        <LessonTemplate />
+        <LessonTemplate user={user} />
     )
 }
 

@@ -17,9 +17,9 @@ const HomePage = () => {
             Our lessons are presented as opportunities to guide friendly troll creatures through their own educational journeys. <br /> <br />
             Our users gain a stronger, more lasting grasp of their lessons by taking on the role of a helpful mentor.
 
-            <br /> <br />  <small>Ready to begin? Click the orange button to create a user profile.</small> </p>
+            <br /> <br />  <small>Ready to begin? Click the orange button to login create a user profile.</small> </p>
           
-          <div className='welcome-message button'>create</div>
+          <div className='welcome-message button'>log in / create</div>
         </div>
 
       </div>

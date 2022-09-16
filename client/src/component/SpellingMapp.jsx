@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-const SpellingMapp = () => {
+const SpellingMapp = ({ user }) => {
   const [description, setDescription] = useState("")
   const [progress, setProgress] = useState([])
 
@@ -15,7 +15,7 @@ const SpellingMapp = () => {
     getDescription()
 
     const getInfo = async () => {
-      let req = await fetch("http://localhost:3000/users/1/list")
+      let req = await fetch(`http://localhost:3000/users/${user.id}/list`)
       let res = await req.json()
       let req2 = await fetch("http://localhost:3000/courses/2")
       let res2 = await req2.json()
