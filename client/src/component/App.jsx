@@ -1,7 +1,7 @@
 import './App.css';
 import Login from './Login'
 import Logout from './Logout'
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext } from "react";
 import './Navbar.css';
 import { Switch, Route } from 'react-router-dom'
 import  Courses from './Courses'
@@ -9,9 +9,10 @@ import  HomePage from './HomePage'
 import  Profile from './Profile'
 import  Navbar from './Navbar';
 import MappScreen from './MappScreen';
+// const UserContext = createContext({})
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
   const fetchUser = async () => {
@@ -26,29 +27,29 @@ const App = () => {
   fetchUser()
 }, [])
 
-  if (!user) return <Login onLogin={setUser} />;
+  // if (user === undefined) return <Login onLogin={setUser} />; if user not logged in, go to home page
 
   return (
     <div>
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <HomePage/>
+          <HomePage user={user} />
         </Route>
         <Route exact path="/courses">
-          <Courses/>
+          <Courses user={user} />
         </Route>
         <Route exact path="/profile">
-          <Profile/>
+          <Profile user={user} />
         </Route>
         <Route exact path="/login">
-          <Login />
+          <Login user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/math-mapp">
-          <MappScreen />
+          <MappScreen user={user} />
         </Route>
          <Route exact path="/logout">
-          <Logout/>
+          <Logout user={user} setUser={setUser} />
         </Route>
       </Switch>
     </div>

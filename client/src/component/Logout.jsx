@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { Redirect } from "react-router-dom";
 
-const Logout = () => {
+const Logout = ({ user, setUser }) => {
     const [isLoading, setIsLoading] = useState(false);
 
    const handleSubmit = (e) => {
@@ -10,7 +10,9 @@ const Logout = () => {
         fetch("http://localhost:3000/logout", {
             method: "DELETE"
         })
-        // <Redirect to="/login" />
+        setUser("undefined")
+        localStorage.setItem('JWT', "undefined")
+        // go to login once logged out
    }
 
   return (
@@ -22,7 +24,7 @@ const Logout = () => {
                 className='input' 
                 type='submit'
                 id="logout"
-                value={isLoading ? "Loading..." : "Going on an adventure - will be back later!"}
+                value={"Going on an adventure - will be back later!"}
             ></input><br />
         </form>
   </div>

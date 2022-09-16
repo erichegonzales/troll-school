@@ -1,9 +1,13 @@
 import { useState } from 'react'
+import HomePage from './HomePage';
 
-const LoginForm = () => {
+const LoginForm = ({ user, setUser }) => {
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  // if (user === !undefined) redirect to profile if user is signed in
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -21,9 +25,11 @@ const LoginForm = () => {
         })
       })
       let req = await res.json()
+      setUser(req)
       localStorage.setItem('JWT', req.jwt);
     }
     fetchLogin()
+    // redirect home page
   }
 
   return (
@@ -48,8 +54,8 @@ const LoginForm = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></input><br />
-          <button type='submit'>
-            {isLoading ? "Loading..." : "Let's go!"}
+          <button type='submit'>Let's go!
+            {/* {isLoading ? "Loading..." : "Let's go!"} */}
           </button>
         </form>
       </div>
