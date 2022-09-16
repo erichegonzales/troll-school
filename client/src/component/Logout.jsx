@@ -18,7 +18,7 @@ const Logout = ({ user, setUser }) => {
   return (
    <div id="logout-component">
     <br />
-    <h1 id='welcome'>Ready to leave Troll School?</h1>
+    <h1 id='goodbye'>Leaving Troll School?</h1>
         <form onSubmit={handleSubmit}>
             <input 
                 className='input' 
