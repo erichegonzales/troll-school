@@ -34,7 +34,7 @@ const LoginForm = ({ user, setUser }) => {
 
   return (
     <>
-      <div id='login'>
+    
         <form onSubmit={handleSubmit}>
           <h2>username</h2>
           <input
@@ -42,6 +42,7 @@ const LoginForm = ({ user, setUser }) => {
             type='text'
             id="username"
             autoComplete="off"
+            placeholder="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           ></input><br />
@@ -50,6 +51,7 @@ const LoginForm = ({ user, setUser }) => {
             className='input'
             type='password'
             id="password"
+            placeholder="password"
             autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -58,7 +60,6 @@ const LoginForm = ({ user, setUser }) => {
             {/* {isLoading ? "Loading..." : "Let's go!"} */}
           </button>
         </form>
-      </div>
     </>
   )
 }
