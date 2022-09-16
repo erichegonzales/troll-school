@@ -24,6 +24,4 @@ const [description, setDescription] = useState("")
   )
 }
 
-
-
 export default ArtMap
