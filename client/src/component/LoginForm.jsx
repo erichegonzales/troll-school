@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import HomePage from './HomePage';
+import { Link } from 'react-router-dom';
 
 const LoginForm = ({ user, setUser }) => {
-
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -55,10 +56,16 @@ const LoginForm = ({ user, setUser }) => {
             autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          ></input><br />
-          <button type='submit'>Let's go!
-            {/* {isLoading ? "Loading..." : "Let's go!"} */}
-          </button>
+            ></input><br />
+          {
+            username === "" || password === "" ?
+            <button type='submit'>Let's go!</button> :
+            <Link to="/" disabled=""><button type='submit'>Let's go!</button></Link> 
+          }
+
+         {/* <Link to="/" disabled=""><button type='submit'>Let's go!
+            {isLoading ? "Loading..." : "Let's go!"} 
+          </button></Link>  */}
         </form>
     </>
   )

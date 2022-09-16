@@ -18,6 +18,7 @@ import HistoryMap from './HistoryMap';
 
 const App = () => {
   const [user, setUser] = useState({});
+  const [showLogin, setShowLogin] = useState(true);
 
   useEffect(() => {
   const fetchUser = async () => {
@@ -39,7 +40,7 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <HomePage user={user} />
+          <HomePage user={user} setShowLogin={setShowLogin}/>
         </Route>
         <Route exact path="/courses">
           <Courses user={user} />
@@ -48,7 +49,7 @@ const App = () => {
           <Profile user={user} />
         </Route>
         <Route exact path="/login">
-          <Login user={user} setUser={setUser} />
+          <Login user={user} setUser={setUser} showLogin={showLogin} setShowLogin={setShowLogin}/>
         </Route>
         <Route exact path="/logout">
           <Logout user={user} setUser={setUser} />

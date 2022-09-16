@@ -3,10 +3,10 @@ import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 // import UserContext from "./App"
 
-const Login = ({ user, setUser }) => {
+const Login = ({ user, setUser, showLogin, setShowLogin }) => {
   // const user = useContext(UserContext);
   // console.log(user)
-  const [showLogin, setShowLogin] = useState(true);
+  // const [showLogin, setShowLogin] = useState(true);
 
   return (
     <div id="login-component">

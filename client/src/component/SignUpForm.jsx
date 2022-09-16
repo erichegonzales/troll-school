@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 
 const SignUpForm = ({ user, setUser }) => {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
@@ -33,6 +35,7 @@ const SignUpForm = ({ user, setUser }) => {
     };
     fetchSignup();
     //redirect to home or login
+    history.push("/")
   }
 
   return (

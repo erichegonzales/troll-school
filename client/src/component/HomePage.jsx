@@ -1,7 +1,6 @@
-import Login from './Login'
-import LessonTemplate from './LessonTemplate'
+import { Link } from "react-router-dom";
 
-const HomePage = () => {
+const HomePage = ({ setShowLogin }) => {
   return (
     <div className="home-page">
       <div className='home-page-container'>
@@ -19,9 +18,8 @@ const HomePage = () => {
 
             <br /> <br />  <small>Ready to begin? Click the orange button to create a user profile.</small> </p>
           
-          <div className='welcome-message button'>create</div>
+          <Link to='/login'><div className='welcome-message button' onClick={setShowLogin(false)}>create</div></Link>
         </div>
-
       </div>
     </div>
   );

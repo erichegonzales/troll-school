@@ -66,7 +66,7 @@ function Profile() {
     }
     getInfo()
   }, [])
-
+  
   const deleteProgress = async () => {
     fetch("http://localhost:3000/users/1/list", {method: 'DELETE'})
     setMathProgress([])
