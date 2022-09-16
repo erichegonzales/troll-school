@@ -54,22 +54,27 @@
  align-self: center;
   width: 50%;
   /* border: solid red; */
+  background-color: skyblue; opacity: 0.85;
+  border-radius: 0px 0px 40px 40px;
 }
 
 #login {
   align-self: center;
   width: 50%;
+  background-color: skyblue; opacity: 0.85;
+  border-radius: 40px 40px 0px 0px;
+  /* border-style: dashed; opacity: 0.85; */
 }
 
 .input {
-  background-color: tan;
-    opacity: .85;
-    border-radius: 10px;
+  /* background-color: tan; */
+    /* opacity: .85; */
+    /* border-radius: 10px; */
     margin: 5px;
 }
 
 #login-component h2 {
-  background-color: tan; opacity: .75;
+  /* background-color: tan; opacity: .75; */
   border-radius: 10px;
   margin: 5px;
 }
