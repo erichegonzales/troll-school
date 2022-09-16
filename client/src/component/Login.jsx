@@ -1,37 +1,35 @@
-import {useState} from 'react'
+import { useState, useContext } from 'react'
+import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
+// import UserContext from "./App"
 
-const Login = () => {
-  const [email, setEmail] =useState('');
-  const [password, setPassword] =useState('');
+const Login = ({ user, setUser }) => {
+  // const user = useContext(UserContext);
+  // console.log(user)
+  const [showLogin, setShowLogin] = useState(true);
 
   return (
     <div id="login-component">
-      <div id='login'>
-      <h2 id='welcome'>Login / Signup</h2>
-      <h2>If you have a user account, log in here.</h2>
-      <form>
-        <h2>email:</h2>
-      <input className='input' type='email' placeholder="name@example.com"></input><br />
-      <h2>password:</h2>
-      <input className='input' type='password' placeholder="password"></input><br />
-      <button type='submit'>Let's go!</button>
-      </form>
-      </div>
-      <div id='signup'>
-      <h2>If you don't have a user account, <br /> ask a parent or guardian to enter a valid email address here!</h2>
-      <form>
-        <h2>email</h2>
-          <input className='input' type='email' placeholder="name@example.com"></input><br />
-      <h2>password</h2>
-          <input className='input' type='password' placeholder="password"></input><br />
-      <button type='submit'>Sign me up!</button>
-      </form>
-
-        
-
-      </div>
+      <h1 id='welcome'>Welcome to Troll School!</h1>
+      {showLogin ? (
+        <>
+          <h2>Log in to your account:</h2>
+          <LoginForm user={user} setUser={setUser} />
+          <br />
+          <h2>If you haven't signed up yet but want to, <br /> ask a parent or guardian for permission and sign up here!</h2>
+          <input type='submit' value='Sign Up' onClick={() => setShowLogin(false)} />
+        </>
+      ) : (
+        <>
+          <h2>Sign up for an account:</h2>
+          <SignUpForm user={user} setUser={setUser} />
+          <h2>If you're already signed up to be a Troll tutor, log in here!</h2>
+          <input type='submit' value='Log In' onClick={() => setShowLogin(true)} />
+        </>
+      )}
     </div>
   );
 }
 
 export default Login;
+

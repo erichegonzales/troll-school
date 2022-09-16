@@ -17,7 +17,7 @@ Completed.destroy_all
 puts 'Seeding data...'
 
 #user = name, email, username, password, avatar
-user_1 = User.create(id: 1, name: "Andor", email: "andor@flatiron.com", username: "iluvicecream", avatar: "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Coffee-Bean-Ice-Cream-Cake_exps127341_THCA2449046B01_20_4b_RMS.jpg")
+user_1 = User.create(id: 1, name: "Andor", email: "andor@flatiron.com", username: "iluvicecream", password: "icecream", avatar: "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Coffee-Bean-Ice-Cream-Cake_exps127341_THCA2449046B01_20_4b_RMS.jpg")
 
 #course = name, description, category
 course_1 = Course.create(id: 1, name: "Math", description: "Math is everywhere. Practicing our math skills will help us in our adventures through all the lands!")
@@ -44,7 +44,6 @@ quiz_8 = Quiz.create(id: 8, title: "Quiz 4", description: "History Quiz.", cours
 completed_1 = Completed.create(id: 1, user: user_1, quiz: quiz_1)
 
 # questions = question_number, content, correct_answer, quiz
-
 question_1 = Question.create(id: 1, number: 1, content: "1 + 3 = ?", correct_answer: "4", incorrect_answer1: "3", incorrect_answer2: "5", quiz: quiz_1)
 question_2 = Question.create(id: 2, number: 2, content: "2 + 4 = ?", correct_answer: "6", incorrect_answer1: "5", incorrect_answer2: "7", quiz: quiz_1)
 question_3 = Question.create(id: 3, number: 3, content: "3 + 5 = ?", correct_answer: "8", incorrect_answer1: "7", incorrect_answer2: "6", quiz: quiz_1)
