@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     skip_before_action :authorized, only: [:create]
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    skip_before_action :authorized, only: [:list_create, :list_destroy]
+    skip_before_action :authorized, only: [:list_create, :list_destroy, :list_index]
     # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
     def profile
@@ -17,8 +17,6 @@ class UsersController < ApplicationController
         render json: { error: 'failed to create user' }, status: :unprocessable_entity
         end
     end
-
-    private
 
     def list_index
         user = find_user
@@ -54,7 +52,7 @@ class UsersController < ApplicationController
         render json: user.completeds
     end
 
-    # private
+    private
     
     def find_user
         user = User.find(params[:id])
