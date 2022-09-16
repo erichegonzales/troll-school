@@ -40,26 +40,52 @@
   flex-direction: column;
   background-image: url(https://ksr-ugc.imgix.net/assets/012/426/478/77600e294f311cfbb682bd2086d64f69_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1463760619&auto=format&frame=1&q=92&s=bd4bb0f6819f5393bab4ef27979fa4e8);
 }
+
 #signup {
+  text-align: center;
+}
+
+.signupLabel {
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+#logout-component {
+  background-color:  #66fdc1;
+  text-align: center;
+  
+  height: 100vh;
+
  align-self: center;
   width: 50%;
   /* border: solid red; */
+  background-color: skyblue; opacity: 0.85;
+  border-radius: 0px 0px 40px 40px;
 }
 
 #login {
   align-self: center;
+  align-items: center;
   width: 50%;
+  background-color: skyblue; opacity: 0.85;
+  border-radius: 40px;
+  /* border-style: dashed; opacity: 0.85; */
 }
 
 .input {
-  background-color: tan;
-    opacity: .85;
-    border-radius: 10px;
-    margin: 5px;
+  /* background-color: tan; */
+    /* opacity: .85; */
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: dodgerblue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 400;
 }
 
 #login-component h2 {
-  background-color: tan; opacity: .75;
+  /* background-color: tan; opacity: .75; */
   border-radius: 10px;
   margin: 5px;
 }
