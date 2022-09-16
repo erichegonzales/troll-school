@@ -50,19 +50,6 @@
   font-weight: 200;
 }
 
-#logout-component {
-  background-color:  #66fdc1;
-  text-align: center;
-  
-  height: 100vh;
-
- align-self: center;
-  width: 50%;
-  /* border: solid red; */
-  background-color: skyblue; opacity: 0.85;
-  border-radius: 0px 0px 40px 40px;
-}
-
 #login {
   align-self: center;
   align-items: center;
@@ -234,4 +221,23 @@
 
 #canvas {
   background-image: url("https://img.freepik.com/free-vector/aged-paper-texture-background-design_60389-141.jpg?w=2000&t=st=1663338812~exp=1663339412~hmac=aaa7857f917053eb273ade1669ba4febf4acbd58b32a955ed80da41d0f9466bc"); 
+}
+
+#logout-component {
+  position:absolute;
+  height: 100vh;
+  width:  100vw;
+  text-align: center;
+  background-image: url("https://www.creativefabrica.com/wp-content/uploads/2020/09/09/Set-of-four-illustrated-backgrounds-Graphics-5375422-1-1-580x409.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%
+}
+#goodbye {
+  margin-top:25vh;
+  font-size: 60px;
+}
+
+#logout {
+  margin-top: 5vh;
+  font-size:25px;
 }
