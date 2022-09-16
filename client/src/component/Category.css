@@ -290,6 +290,36 @@
     background-size: cover;
     background-position: center;
 }
+.bg-image13 {
+    background-image: url('https://img.freepik.com/premium-vector/treasure-game-map-cartoon-tropical-island-map-showing-road-direction-pirate-gold-treasure_88272-1950.jpg?w=2000');
+    background-size: cover;
+    background-position: center;
+}
+.bg-image8 {
+    background-image: url('https://i.pinimg.com/736x/f1/19/5a/f1195a71f0c6da8bbb4acc918613072c.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.bg-image9 {
+    background-image: url('https://i.pinimg.com/originals/f2/41/f9/f241f990206392e8916319d1f2a5cb9b.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-image10 {
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/004/744/318/large/konstantin-gorelov-2.jpg?1485950428');
+    background-size: cover;
+    background-position: center;
+}
+.bg-image11 {
+    background-image: url('https://i.pinimg.com/originals/cf/97/a9/cf97a9a30fddb0325f74cf6a83a51dd7.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-image12 {
+    background-image: url('https://i.pinimg.com/originals/42/0d/5d/420d5d312ebbcd2f58e13f60d6550dfd.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
 
 /*ALERT POPUP*/
