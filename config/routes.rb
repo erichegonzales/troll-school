@@ -12,10 +12,15 @@ Rails.application.routes.draw do
 
   # namespace :api do
   #   namespace :v1 do
-      resources :users, only: [:create]
+      # resources :users, only: [:create]
       post '/login', to: 'auth#create'
       post '/signup', to: 'users#create'
       get '/profile', to: 'users#profile'
   #   end
   # end
+  get "/courses/:id/quiz/:quid", to: "courses#quiz"
+
+  get "/users/:id/list", to: "users#list_index"
+  post "/users/:id/list/add/:quid", to: "users#list_create"
+  delete "/users/:id/list", to: "users#list_destroy"
 end

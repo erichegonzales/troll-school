@@ -230,6 +230,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-darwin-20
   x86_64-darwin-21
   x86_64-linux
 
@@ -243,7 +244,7 @@ DEPENDENCIES
   jbuilder
   jwt
   puma (~> 5.0)
-  rack-cors
+  rack-cors (~> 1.1, >= 1.1.1)
   rails (~> 7.0.3, >= 7.0.3.1)
   selenium-webdriver
   sprockets-rails
@@ -258,4 +259,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.20
+   2.3.8

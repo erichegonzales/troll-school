@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_11_152516) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_15_170644) do
+  create_table "completeds", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "quiz_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quiz_id"], name: "index_completeds_on_quiz_id"
+    t.index ["user_id"], name: "index_completeds_on_user_id"
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -39,15 +48,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_152516) do
     t.index ["course_id"], name: "index_quizzes_on_course_id"
   end
 
-  create_table "user_courses", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "course_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_user_courses_on_course_id"
-    t.index ["user_id"], name: "index_user_courses_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
@@ -58,8 +58,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_11_152516) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "completeds", "quizzes"
+  add_foreign_key "completeds", "users"
   add_foreign_key "questions", "quizzes"
   add_foreign_key "quizzes", "courses"
-  add_foreign_key "user_courses", "courses"
-  add_foreign_key "user_courses", "users"
 end

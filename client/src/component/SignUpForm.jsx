@@ -32,7 +32,7 @@ const SignUpForm = ({ user, setUser }) => {
       localStorage.setItem("JWT", req.jwt);
     };
     fetchSignup();
-    //redirect to home
+    //redirect to home or login
   }
 
   return (

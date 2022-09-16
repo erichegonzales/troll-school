@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
     question = Question.find_by(id: params[:id])
     if question
     render json: {
-      number: question.number,
+      question_number: question.number,
       content: question.content,
       correct_answer: question.correct_answer,
       answers: [

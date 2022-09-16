@@ -1,13 +1,17 @@
 class CoursesController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    
     def index
         render json: Course.all
     end
 
     def show
         course = find_course
-        render json: course
+        render json: course.to_json(methods: [:quizzes])
+    end
+
+    def quiz
+        course = find_course
+        render json: course.quizzes[params[:quid].to_i - 1].to_json(methods: [:questions])
     end
 
     private

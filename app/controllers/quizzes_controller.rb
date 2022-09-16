@@ -6,9 +6,9 @@ class QuizzesController < ApplicationController
   end
 
   def show
-    quiz = Quiz.find_by(id: params[:id])
+    quiz = Quiz .find_by(id: params[:id])
     if quiz
-      render json: quiz
+      render json: quiz.to_json(methods: [:questions])
     else
       render json: {error: "Quiz not found" }, status: 404
     end

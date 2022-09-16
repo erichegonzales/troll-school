@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.4"
 
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
@@ -64,6 +65,8 @@ group :development do
   # gem "spring"
 end
 
+
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
@@ -72,7 +75,7 @@ group :test do
 end
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-gem 'rack-cors'
+# gem 'rack-cors'
 
 gem "active_model_serializers", "~> 0.10.12"
 gem 'jwt'
