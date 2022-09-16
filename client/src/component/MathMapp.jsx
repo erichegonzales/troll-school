@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-const MathMapp = () => {
+const MathMapp = ({ user }) => {
   const [description, setDescription] = useState("")
   const [progress, setProgress] = useState([])
 
@@ -14,7 +14,7 @@ const MathMapp = () => {
     getDescription()
 
     const getInfo = async () => {
-      let req = await fetch("http://localhost:3000/users/1/list")
+      let req = await fetch(`http://localhost:3000/users/${user.id}/list`)
       let res = await req.json()
       let req2 = await fetch("http://localhost:3000/courses/1")
       let res2 = await req2.json()

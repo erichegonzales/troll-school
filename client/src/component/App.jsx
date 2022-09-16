@@ -19,6 +19,8 @@ import HistoryMap from './HistoryMap';
 const App = () => {
   const [user, setUser] = useState({});
 
+  console.log(user)
+
   useEffect(() => {
   const fetchUser = async () => {
     let res = await fetch("http://localhost:3000/profile", {
@@ -39,13 +41,13 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <HomePage user={user} />
+          <HomePage user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses">
-          <Courses user={user} />
+          <Courses user={user} setUser={setUser} />
         </Route>
         <Route exact path="/profile">
-          <Profile user={user} />
+          <Profile user={user} setUser={setUser} />
         </Route>
         <Route exact path="/login">
           <Login user={user} setUser={setUser} />
@@ -54,19 +56,19 @@ const App = () => {
           <Logout user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/math-mapp">
-          <MathMapp />
+          <MathMapp user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/spelling-mapp">
-          <SpellingMapp />
+          <SpellingMapp user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/art-mapp">
-          <ArtMap />
+          <ArtMap user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/history-mapp">
-          <HistoryMap />
+          <HistoryMap user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/:id/quizzes/:quid">
-          <LessonTemplate />
+          <LessonTemplate user={user} setUser={setUser} />
         </Route>
       </Switch>
     </div>

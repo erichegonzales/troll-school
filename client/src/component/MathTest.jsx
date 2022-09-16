@@ -1,11 +1,11 @@
 import LessonTemplate from './LessonTemplate'
 
-const MathTest = () => {
-    return(
-        <div>
-        <LessonTemplate />
-        </div>
-    )
+const MathTest = ({ user }) => {
+    return (
+      <div>
+        <LessonTemplate user={user} />
+      </div>
+    );
 }
 
 export default MathTest

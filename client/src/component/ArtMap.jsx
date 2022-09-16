@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import {Canvas} from "./Canvas"
 
-const ArtMap = () => {
+const ArtMap = ({ user }) => {
 
 const [description, setDescription] = useState("")
 

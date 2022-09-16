@@ -36,7 +36,7 @@ const LoginForm = ({ user, setUser }) => {
     <>
     
         <form onSubmit={handleSubmit}>
-          <h2>username</h2>
+          <label className='signupLabel'>username</label>
           <input
             className='input'
             type='text'
@@ -46,7 +46,7 @@ const LoginForm = ({ user, setUser }) => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           ></input><br />
-          <h2>password</h2><h5>(ssshhhh!)</h5>
+        <label className='signupLabel'>password</label>
           <input
             className='input'
             type='password'

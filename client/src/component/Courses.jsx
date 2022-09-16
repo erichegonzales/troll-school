@@ -1,9 +1,14 @@
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
 const handleCourseHover = () => {
 }
 
-const Courses = () => {
+const Courses = ({ user, setUser }) => {
+   useEffect(() => {
+     setUser(user);
+   }, []);
+
   return (
     <div className="course-page">
       <div className="category-container">

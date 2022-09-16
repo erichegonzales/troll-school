@@ -88,7 +88,7 @@ const SignUpForm = ({ user, setUser }) => {
           ></input>
           <br />
 
-          <label className="signupLabel">confirm password: </label>
+          <label className="signupLabel">confirm: </label>
           <input
             className="input"
             type="password"

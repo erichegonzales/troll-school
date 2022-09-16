@@ -17,7 +17,7 @@ Completed.destroy_all
 puts 'Seeding data...'
 
 #user = name, email, username, password, avatar
-user_1 = User.create(id: 1, name: "Andor", email: "andor@flatiron.com", username: "iluvicecream", password: "icecream", avatar: "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Coffee-Bean-Ice-Cream-Cake_exps127341_THCA2449046B01_20_4b_RMS.jpg")
+user_1 = User.create(id: 1, name: "Andor", email: "andor@flatiron.com", username: "iluvicecream", password: "icecream", password_confirmation: "icecream", avatar: "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Coffee-Bean-Ice-Cream-Cake_exps127341_THCA2449046B01_20_4b_RMS.jpg")
 
 #course = name, description, category
 course_1 = Course.create(id: 1, name: "Math", description: "Math is everywhere. Practicing our math skills will help us in our adventures through all the lands!")
