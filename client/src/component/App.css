@@ -231,3 +231,7 @@
   border-width: thick;
   border-radius: 25px;
 }
+
+#canvas {
+  background-image: url("https://img.freepik.com/free-vector/aged-paper-texture-background-design_60389-141.jpg?w=2000&t=st=1663338812~exp=1663339412~hmac=aaa7857f917053eb273ade1669ba4febf4acbd58b32a955ed80da41d0f9466bc"); 
+}
