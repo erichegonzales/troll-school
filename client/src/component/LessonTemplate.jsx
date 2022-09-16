@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
 
 const LessonTemplate = ({ user }) => {
+
   const [pop, setPop] = useState(false);
   const [question, setQuestion] = useState(0);
   const [bar, setBar] = useState(0);

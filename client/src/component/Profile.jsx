@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { WiredCard } from "wired-elements";
 import "wired-elements";
 
-function Profile({ user }) {
+function Profile({ user, setUser }) {
   const [userFiller, setUserFiller] = useState("Kid who Made a Profile");
   const [userProfilePic, setUserProfilePic] = useState(
     "https://www.pngrepo.com/png/380324/512/costume-ghost-goblin-halloween-horror.png"
@@ -83,8 +83,8 @@ function Profile({ user }) {
   return (
     <div id="profile-component">
       <div id="profile-name-and-pic">
-        <img id="user-pic" src={userProfilePic} alt="user" /> <br />
-        {user.avatar}
+        <img id="user-pic" src={user.avatar} alt="user" /> <br />
+      
       </div>
 
       <div>
@@ -97,11 +97,27 @@ function Profile({ user }) {
           Students Helped:
           <div id="students">
             {studentsHelped[0].name} <br />
-            <img className="student-pic" src={studentsHelped[0].img} alt="troll" key="1" />
+            <img
+              className="student-pic"
+              src={studentsHelped[0].img}
+              alt="troll"
+              key="1"
+            />
             {studentsHelped[1].name} <br />
-            <img className="student-pic" src={studentsHelped[1].img} alt="troll" key="2" /> <br />
+            <img
+              className="student-pic"
+              src={studentsHelped[1].img}
+              alt="troll"
+              key="2"
+            />{" "}
+            <br />
             {studentsHelped[2].name} <br />
-            <img className="student-pic" src={studentsHelped[2].img} alt="troll" key="3" />
+            <img
+              className="student-pic"
+              src={studentsHelped[2].img}
+              alt="troll"
+              key="3"
+            />
           </div>
         </wired-card>
 

@@ -41,13 +41,13 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <HomePage user={user} />
+          <HomePage user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses">
-          <Courses user={user} />
+          <Courses user={user} setUser={setUser} />
         </Route>
         <Route exact path="/profile">
-          <Profile user={user} />
+          <Profile user={user} setUser={setUser} />
         </Route>
         <Route exact path="/login">
           <Login user={user} setUser={setUser} />
@@ -56,19 +56,19 @@ const App = () => {
           <Logout user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/math-mapp">
-          <MathMapp user={user} />
+          <MathMapp user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/spelling-mapp">
-          <SpellingMapp user={user} />
+          <SpellingMapp user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/art-mapp">
-          <ArtMap user={user} />
+          <ArtMap user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/history-mapp">
-          <HistoryMap user={user} />
+          <HistoryMap user={user} setUser={setUser} />
         </Route>
         <Route exact path="/courses/:id/quizzes/:quid">
-          <LessonTemplate user={user} />
+          <LessonTemplate user={user} setUser={setUser} />
         </Route>
       </Switch>
     </div>
