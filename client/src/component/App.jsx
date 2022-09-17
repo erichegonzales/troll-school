@@ -18,7 +18,7 @@ import HistoryMap from './HistoryMap';
 
 const App = () => {
   const [user, setUser] = useState({});
-  const [showLogin, setShowLogin] = useState(true);
+  const [showLogin, setShowLogin] = useState(false);
 
   useEffect(() => {
   const fetchUser = async () => {

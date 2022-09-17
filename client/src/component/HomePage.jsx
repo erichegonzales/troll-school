@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const HomePage = ({ setShowLogin }) => {
+const HomePage = ({ showLogin, setShowLogin }) => {
   return (
     <div className="home-page">
       <div className='home-page-container'>

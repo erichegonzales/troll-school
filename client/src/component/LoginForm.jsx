@@ -60,7 +60,7 @@ const LoginForm = ({ user, setUser }) => {
           {
             username === "" || password === "" ?
             <button type='submit'>Let's go!</button> :
-            <Link to="/" disabled=""><button type='submit'>Let's go!</button></Link> 
+            <Link to="/"><button type='submit'>Let's go!</button></Link> 
           }
 
          {/* <Link to="/" disabled=""><button type='submit'>Let's go!
